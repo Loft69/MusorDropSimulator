@@ -1,0 +1,72 @@
+.case-workspace {
+  min-height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 32px;
+}
+
+.click-button {
+    cursor: pointer;
+}
+
+.case-workspace__inner {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+}
+
+.case-workspace__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  background: transparent;
+  color: #f1e7ff;
+  cursor: pointer;
+  font: inherit;
+  opacity: .85;
+}
+
+.case-workspace__back:hover {
+  opacity: 1;
+}
+
+.case-workspace__content {
+  width: min(720px, 100%);
+  box-sizing: border-box;
+  padding: 64px 40px;
+  border: 1px dashed rgba(241, 231, 255, .28);
+  border-radius: 24px;
+  text-align: center;
+  background: rgba(20, 15, 31, .35);
+}
+
+.case-workspace__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  padding: 6px 12px;
+  border: 1px solid rgba(241, 231, 255, .25);
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: .12em;
+  opacity: .75;
+}
+
+.case-workspace__content h1 {
+  margin: 0 0 12px;
+}
+
+.case-workspace__content p {
+  margin: 0 0 8px;
+  opacity: .8;
+}
+
+.case-workspace__content span {
+  opacity: .5;
+}

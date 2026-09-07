@@ -1,0 +1,3399 @@
+.chakra-segment-group__item {
+    color: var(--gaydev-colors-text-tretiary);
+    height: 56px;
+    padding-inline: 32px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: color .2s
+}
+
+.chakra-segment-group__item[data-state=checked] {
+    color: var(--gaydev-colors-text-primary)
+}
+
+@font-face {
+    font-family: SF Pro Rounded;
+    src: url(../../public/images/SF-Pro-Rounded-Ultralight-niY2zc8r.otf)format("opentype");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: SF Pro Rounded;
+    src: url(../../public/images/SF-Pro-Rounded-Thin-DbQ2BQqX.otf)format("opentype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: SF Pro Rounded;
+    src: url(../../public/images/SF-Pro-Rounded-Light-DgPwchCK.otf)format("opentype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: SF Pro Rounded;
+    src: url(../../public/images/SF-Pro-Rounded-Regular-BpcFdtlb.otf)format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: SF Pro Rounded;
+    src: url(../../public/images/SF-Pro-Rounded-Medium-CDQcL2QF.otf)format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: SF Pro Rounded;
+    src: url(../../public/images/SF-Pro-Rounded-Semibold-zQiqMHwN.otf)format("opentype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: SF Pro Rounded;
+    src: url(../../public/images/SF-Pro-Rounded-Bold-DU54a1he.otf)format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: SF Pro Rounded;
+    src: url(../../public/images/SF-Pro-Rounded-Heavy-8On75r33.otf)format("opentype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: SF Pro Rounded;
+    src: url(../../public/images/SF-Pro-Rounded-Black-D45MJlp4.otf)format("opentype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Santa Maria Sans;
+    src: url(../../public/images/Santa-Maria-Sand-blsmsBC9.ttf);
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap
+}
+
+:focus-visible,
+:focus {
+    box-shadow: none !important;
+    outline: none !important
+}
+
+:has(input:focus-visible):is(:focus, [data-focus]) {
+    outline: none !important
+}
+
+h2,
+p {
+    line-height: normal !important
+}
+
+body {
+    overflow: hidden scroll
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+::-webkit-scrollbar {
+    display: none
+}
+
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none
+}
+
+@layer reset, base, tokens, recipes;
+
+@layer reset {
+    html {
+        line-height: 1.5;
+        --font-fallback: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+        text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizelegibility;
+        touch-action: manipulation;
+        tab-size: 4;
+        font-family: var(--global-font-body, var(--font-fallback));
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        font: inherit;
+        overflow-wrap: break-word;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    *,
+    ::before,
+    ::after,
+    ::backdrop {
+        box-sizing: border-box;
+        border-width: 0px;
+        border-style: solid;
+        border-color: var(--global-color-border, currentColor);
+    }
+
+    hr {
+        height: 0px;
+        color: inherit;
+        border-top-width: 1px;
+    }
+
+    body {
+        min-height: 100dvh;
+        position: relative;
+    }
+
+    img {
+        border-style: none;
+    }
+
+    img,
+    svg,
+    video,
+    canvas,
+    audio,
+    iframe,
+    embed,
+    object {
+        display: block;
+        vertical-align: middle;
+    }
+
+    iframe {
+        border-width: medium;
+        border-style: none;
+        border-color: currentcolor;
+        border-image: none;
+    }
+
+    img,
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        overflow-wrap: break-word;
+    }
+
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    code,
+    kbd,
+    pre,
+    samp {
+        font-size: 1em;
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+        appearance: button;
+        background-color: transparent;
+        background-image: none;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        color: inherit;
+    }
+
+    button,
+    select {
+        text-transform: none;
+    }
+
+    table {
+        text-indent: 0px;
+        border-color: inherit;
+        border-collapse: collapse;
+    }
+
+    ::-webkit-input-placeholder {
+        opacity: unset;
+        color: rgb(156, 163, 175);
+        user-select: none;
+    }
+
+    ::placeholder {
+        opacity: unset;
+        color: rgb(156, 163, 175);
+        user-select: none;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    summary {
+        display: list-item;
+    }
+
+    small {
+        font-size: 80%;
+    }
+
+    sub,
+    sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+    }
+
+    sub {
+        bottom: -0.25em;
+    }
+
+    sup {
+        top: -0.5em;
+    }
+
+    dialog {
+        padding: 0px;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
+    abbr:where([title]) {
+        text-decoration: underline dotted;
+    }
+
+    b,
+    strong {
+        font-weight: bolder;
+    }
+
+    code,
+    kbd,
+    samp,
+    pre {
+        font-size: 1em;
+        --font-mono-fallback: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New';
+        font-family: var(--global-font-mono, var(--font-mono-fallback));
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="search"],
+    input[type="password"] {
+        appearance: none;
+    }
+
+    input[type="search"] {
+        appearance: textfield;
+        outline-offset: -2px;
+    }
+
+    ::-webkit-search-decoration,
+    ::-webkit-search-cancel-button {
+        appearance: none;
+    }
+
+    ::-webkit-file-upload-button {
+        appearance: button;
+        font: inherit;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        height: auto;
+    }
+
+    input[type="number"] {}
+
+    [hidden]:where(:not([hidden="until-found"])) {
+        display: none !important;
+    }
+}
+
+@layer base {
+    @-webkit-keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @-webkit-keyframes pulse {
+        50% {
+            opacity: 0.5;
+        }
+    }
+
+    @keyframes pulse {
+        50% {
+            opacity: 0.5;
+        }
+    }
+
+    @-webkit-keyframes ping {
+
+        75%,
+        100% {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
+
+    @keyframes ping {
+
+        75%,
+        100% {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
+
+    @-webkit-keyframes bounce {
+
+        0%,
+        100% {
+            transform: translateY(-25%);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        }
+
+        50% {
+            transform: none;
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        }
+    }
+
+    @keyframes bounce {
+
+        0%,
+        100% {
+            transform: translateY(-25%);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        }
+
+        50% {
+            transform: none;
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        }
+    }
+
+    @-webkit-keyframes bg-position {
+        0% {
+            background-position: var(--animate-from, 1rem) 0;
+        }
+
+        100% {
+            background-position: var(--animate-to, 0) 0;
+        }
+    }
+
+    @keyframes bg-position {
+        0% {
+            background-position: var(--animate-from, 1rem) 0;
+        }
+
+        100% {
+            background-position: var(--animate-to, 0) 0;
+        }
+    }
+
+    @-webkit-keyframes position {
+        0% {
+            inset-inline-start: var(--animate-from-x);
+            inset-block-start: var(--animate-from-y);
+        }
+
+        100% {
+            inset-inline-start: var(--animate-to-x);
+            inset-block-start: var(--animate-to-y);
+        }
+    }
+
+    @keyframes position {
+        0% {
+            inset-inline-start: var(--animate-from-x);
+            inset-block-start: var(--animate-from-y);
+        }
+
+        100% {
+            inset-inline-start: var(--animate-to-x);
+            inset-block-start: var(--animate-to-y);
+        }
+    }
+
+    @-webkit-keyframes circular-progress {
+        0% {
+            stroke-dasharray: 1, 400;
+            stroke-dashoffset: 0;
+        }
+
+        50% {
+            stroke-dasharray: 400, 400;
+            stroke-dashoffset: -100%;
+        }
+
+        100% {
+            stroke-dasharray: 400, 400;
+            stroke-dashoffset: -260%;
+        }
+    }
+
+    @keyframes circular-progress {
+        0% {
+            stroke-dasharray: 1, 400;
+            stroke-dashoffset: 0;
+        }
+
+        50% {
+            stroke-dasharray: 400, 400;
+            stroke-dashoffset: -100%;
+        }
+
+        100% {
+            stroke-dasharray: 400, 400;
+            stroke-dashoffset: -260%;
+        }
+    }
+
+    @-webkit-keyframes expand-height {
+        0% {
+            height: var(--collapsed-height, 0);
+        }
+
+        100% {
+            height: var(--height);
+        }
+    }
+
+    @keyframes expand-height {
+        0% {
+            height: var(--collapsed-height, 0);
+        }
+
+        100% {
+            height: var(--height);
+        }
+    }
+
+    @-webkit-keyframes collapse-height {
+        0% {
+            height: var(--height);
+        }
+
+        100% {
+            height: var(--collapsed-height, 0);
+        }
+    }
+
+    @keyframes collapse-height {
+        0% {
+            height: var(--height);
+        }
+
+        100% {
+            height: var(--collapsed-height, 0);
+        }
+    }
+
+    @-webkit-keyframes expand-width {
+        0% {
+            width: var(--collapsed-width, 0);
+        }
+
+        100% {
+            width: var(--width);
+        }
+    }
+
+    @keyframes expand-width {
+        0% {
+            width: var(--collapsed-width, 0);
+        }
+
+        100% {
+            width: var(--width);
+        }
+    }
+
+    @-webkit-keyframes collapse-width {
+        0% {
+            width: var(--width);
+        }
+
+        100% {
+            width: var(--collapsed-width, 0);
+        }
+    }
+
+    @keyframes collapse-width {
+        0% {
+            width: var(--width);
+        }
+
+        100% {
+            width: var(--collapsed-width, 0);
+        }
+    }
+
+    @-webkit-keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fade-out {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fade-out {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @-webkit-keyframes slide-from-left-full {
+        0% {
+            translate: -100%;
+        }
+
+        100% {
+            translate: 0px;
+        }
+    }
+
+    @keyframes slide-from-left-full {
+        0% {
+            translate: -100%;
+        }
+
+        100% {
+            translate: 0px;
+        }
+    }
+
+    @-webkit-keyframes slide-from-right-full {
+        0% {
+            translate: 100%;
+        }
+
+        100% {
+            translate: 0px;
+        }
+    }
+
+    @keyframes slide-from-right-full {
+        0% {
+            translate: 100%;
+        }
+
+        100% {
+            translate: 0px;
+        }
+    }
+
+    @-webkit-keyframes slide-from-top-full {
+        0% {
+            translate: 0px -100%;
+        }
+
+        100% {
+            translate: 0px;
+        }
+    }
+
+    @keyframes slide-from-top-full {
+        0% {
+            translate: 0px -100%;
+        }
+
+        100% {
+            translate: 0px;
+        }
+    }
+
+    @-webkit-keyframes slide-from-bottom-full {
+        0% {
+            translate: 0px 100%;
+        }
+
+        100% {
+            translate: 0px;
+        }
+    }
+
+    @keyframes slide-from-bottom-full {
+        0% {
+            translate: 0px 100%;
+        }
+
+        100% {
+            translate: 0px;
+        }
+    }
+
+    @-webkit-keyframes slide-to-left-full {
+        0% {
+            translate: 0px;
+        }
+
+        100% {
+            translate: -100%;
+        }
+    }
+
+    @keyframes slide-to-left-full {
+        0% {
+            translate: 0px;
+        }
+
+        100% {
+            translate: -100%;
+        }
+    }
+
+    @-webkit-keyframes slide-to-right-full {
+        0% {
+            translate: 0px;
+        }
+
+        100% {
+            translate: 100%;
+        }
+    }
+
+    @keyframes slide-to-right-full {
+        0% {
+            translate: 0px;
+        }
+
+        100% {
+            translate: 100%;
+        }
+    }
+
+    @-webkit-keyframes slide-to-top-full {
+        0% {
+            translate: 0px;
+        }
+
+        100% {
+            translate: 0px -100%;
+        }
+    }
+
+    @keyframes slide-to-top-full {
+        0% {
+            translate: 0px;
+        }
+
+        100% {
+            translate: 0px -100%;
+        }
+    }
+
+    @-webkit-keyframes slide-to-bottom-full {
+        0% {
+            translate: 0px;
+        }
+
+        100% {
+            translate: 0px 100%;
+        }
+    }
+
+    @keyframes slide-to-bottom-full {
+        0% {
+            translate: 0px;
+        }
+
+        100% {
+            translate: 0px 100%;
+        }
+    }
+
+    @-webkit-keyframes slide-from-top {
+        0% {
+            translate: 0 calc(var(--slide-from-top-distance, 0.5rem) * -1);
+        }
+
+        100% {
+            translate: 0px;
+        }
+    }
+
+    @keyframes slide-from-top {
+        0% {
+            translate: 0 calc(var(--slide-from-top-distance, 0.5rem) * -1);
+        }
+
+        100% {
+            translate: 0px;
+        }
+    }
+
+    @-webkit-keyframes slide-from-bottom {
+        0% {
+            translate: 0 var(--slide-from-bottom-distance, 0.5rem);
+        }
+
+        100% {
+            translate: 0px;
+        }
+    }
+
+    @keyframes slide-from-bottom {
+        0% {
+            translate: 0 var(--slide-from-bottom-distance, 0.5rem);
+        }
+
+        100% {
+            translate: 0px;
+        }
+    }
+
+    @-webkit-keyframes slide-from-left {
+        0% {
+            translate: calc(var(--slide-from-left-distance, 0.5rem) * -1) 0;
+        }
+
+        100% {
+            translate: 0px;
+        }
+    }
+
+    @keyframes slide-from-left {
+        0% {
+            translate: calc(var(--slide-from-left-distance, 0.5rem) * -1) 0;
+        }
+
+        100% {
+            translate: 0px;
+        }
+    }
+
+    @-webkit-keyframes slide-from-right {
+        0% {
+            translate: var(--slide-from-right-distance, 0.5rem) 0;
+        }
+
+        100% {
+            translate: 0px;
+        }
+    }
+
+    @keyframes slide-from-right {
+        0% {
+            translate: var(--slide-from-right-distance, 0.5rem) 0;
+        }
+
+        100% {
+            translate: 0px;
+        }
+    }
+
+    @-webkit-keyframes slide-to-top {
+        0% {
+            translate: 0px;
+        }
+
+        100% {
+            translate: 0 calc(var(--slide-to-top-distance, 0.5rem) * -1);
+        }
+    }
+
+    @keyframes slide-to-top {
+        0% {
+            translate: 0px;
+        }
+
+        100% {
+            translate: 0 calc(var(--slide-to-top-distance, 0.5rem) * -1);
+        }
+    }
+
+    @-webkit-keyframes slide-to-bottom {
+        0% {
+            translate: 0px;
+        }
+
+        100% {
+            translate: 0 var(--slide-to-bottom-distance, 0.5rem);
+        }
+    }
+
+    @keyframes slide-to-bottom {
+        0% {
+            translate: 0px;
+        }
+
+        100% {
+            translate: 0 var(--slide-to-bottom-distance, 0.5rem);
+        }
+    }
+
+    @-webkit-keyframes slide-to-left {
+        0% {
+            translate: 0px;
+        }
+
+        100% {
+            translate: calc(var(--slide-to-left-distance, 0.5rem) * -1) 0;
+        }
+    }
+
+    @keyframes slide-to-left {
+        0% {
+            translate: 0px;
+        }
+
+        100% {
+            translate: calc(var(--slide-to-left-distance, 0.5rem) * -1) 0;
+        }
+    }
+
+    @-webkit-keyframes slide-to-right {
+        0% {
+            translate: 0px;
+        }
+
+        100% {
+            translate: var(--slide-to-right-distance, 0.5rem) 0;
+        }
+    }
+
+    @keyframes slide-to-right {
+        0% {
+            translate: 0px;
+        }
+
+        100% {
+            translate: var(--slide-to-right-distance, 0.5rem) 0;
+        }
+    }
+
+    @-webkit-keyframes scale-in {
+        0% {
+            scale: 0.95;
+        }
+
+        100% {
+            scale: 1;
+        }
+    }
+
+    @keyframes scale-in {
+        0% {
+            scale: 0.95;
+        }
+
+        100% {
+            scale: 1;
+        }
+    }
+
+    @-webkit-keyframes scale-out {
+        0% {
+            scale: 1;
+        }
+
+        100% {
+            scale: 0.95;
+        }
+    }
+
+    @keyframes scale-out {
+        0% {
+            scale: 1;
+        }
+
+        100% {
+            scale: 0.95;
+        }
+    }
+
+    @-webkit-keyframes marqueeX {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(var(--marquee-translate));
+        }
+    }
+
+    @keyframes marqueeX {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(var(--marquee-translate));
+        }
+    }
+
+    @-webkit-keyframes marqueeY {
+        0% {
+            transform: translateY(0%);
+        }
+
+        100% {
+            transform: translateY(var(--marquee-translate));
+        }
+    }
+
+    @keyframes marqueeY {
+        0% {
+            transform: translateY(0%);
+        }
+
+        100% {
+            transform: translateY(var(--marquee-translate));
+        }
+    }
+
+    * {
+        font-feature-settings: "cv11";
+        --ring-inset: var(--chakra-empty, );
+        --ring-offset-width: 0px;
+        --ring-offset-color: #fff;
+        --ring-color: rgba(66, 153, 225, 0.6);
+        --ring-offset-shadow: 0 0 #0000;
+        --ring-shadow: 0 0 #0000;
+        --brightness: var(--chakra-empty, );
+        --contrast: var(--chakra-empty, );
+        --grayscale: var(--chakra-empty, );
+        --hue-rotate: var(--chakra-empty, );
+        --invert: var(--chakra-empty, );
+        --saturate: var(--chakra-empty, );
+        --sepia: var(--chakra-empty, );
+        --drop-shadow: var(--chakra-empty, );
+        --backdrop-blur: var(--chakra-empty, );
+        --backdrop-brightness: var(--chakra-empty, );
+        --backdrop-contrast: var(--chakra-empty, );
+        --backdrop-grayscale: var(--chakra-empty, );
+        --backdrop-hue-rotate: var(--chakra-empty, );
+        --backdrop-invert: var(--chakra-empty, );
+        --backdrop-opacity: var(--chakra-empty, );
+        --backdrop-saturate: var(--chakra-empty, );
+        --backdrop-sepia: var(--chakra-empty, );
+        --global-font-mono: var(--gaydev-fonts-mono);
+        --global-font-body: var(--gaydev-fonts-body);
+        --global-color-border: var(--gaydev-colors-border);
+    }
+
+    html {
+        color: var(--gaydev-colors-fg);
+        background: var(--gaydev-colors-bg);
+        --bg-currentcolor: var(--gaydev-colors-bg);
+        line-height: 1.5;
+        --gaydev-colors-color-palette-50: var(--gaydev-colors-gray-50);
+        --gaydev-colors-color-palette-100: var(--gaydev-colors-gray-100);
+        --gaydev-colors-color-palette-200: var(--gaydev-colors-gray-200);
+        --gaydev-colors-color-palette-300: var(--gaydev-colors-gray-300);
+        --gaydev-colors-color-palette-400: var(--gaydev-colors-gray-400);
+        --gaydev-colors-color-palette-500: var(--gaydev-colors-gray-500);
+        --gaydev-colors-color-palette-600: var(--gaydev-colors-gray-600);
+        --gaydev-colors-color-palette-700: var(--gaydev-colors-gray-700);
+        --gaydev-colors-color-palette-800: var(--gaydev-colors-gray-800);
+        --gaydev-colors-color-palette-900: var(--gaydev-colors-gray-900);
+        --gaydev-colors-color-palette-950: var(--gaydev-colors-gray-950);
+        --gaydev-colors-color-palette-contrast: var(--gaydev-colors-gray-contrast);
+        --gaydev-colors-color-palette-fg: var(--gaydev-colors-gray-fg);
+        --gaydev-colors-color-palette-subtle: var(--gaydev-colors-gray-subtle);
+        --gaydev-colors-color-palette-muted: var(--gaydev-colors-gray-muted);
+        --gaydev-colors-color-palette-emphasized: var(--gaydev-colors-gray-emphasized);
+        --gaydev-colors-color-palette-solid: var(--gaydev-colors-gray-solid);
+        --gaydev-colors-color-palette-focus-ring: var(--gaydev-colors-gray-focus-ring);
+        --gaydev-colors-color-palette-border: var(--gaydev-colors-gray-border);
+    }
+
+    ::-webkit-input-placeholder {
+        --mix-color: color-mix(in srgb, var(--gaydev-colors-fg-muted) 80%, transparent);
+        color: var(--mix-color, var(--gaydev-colors-fg-muted));
+    }
+
+    ::placeholder,
+    [data-placeholder] {
+        --mix-color: color-mix(in srgb, var(--gaydev-colors-fg-muted) 80%, transparent);
+        color: var(--mix-color, var(--gaydev-colors-fg-muted));
+    }
+
+    ::selection {
+        --mix-background: color-mix(in srgb, var(--gaydev-colors-color-palette-emphasized) 80%, transparent);
+        background: var(--mix-background, var(--gaydev-colors-color-palette-emphasized));
+        --bg-currentcolor: var(--mix-background, var(--gaydev-colors-color-palette-emphasized));
+    }
+
+    html,
+    body {
+        background: var(--gaydev-colors-bg-canvas);
+        --bg-currentcolor: var(--gaydev-colors-bg-canvas);
+        color: var(--gaydev-colors-text-primary);
+        line-height: normal;
+    }
+}
+
+@layer tokens {
+    :where(html, .chakra-theme) {
+        --gaydev-aspect-ratios-square: 1/1;
+        --gaydev-aspect-ratios-landscape: 4/3;
+        --gaydev-aspect-ratios-portrait: 3/4;
+        --gaydev-aspect-ratios-wide: 16/9;
+        --gaydev-aspect-ratios-ultrawide: 18/5;
+        --gaydev-aspect-ratios-golden: 1.618/1;
+        --gaydev-animations-spin: spin 1s linear infinite;
+        --gaydev-animations-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+        --gaydev-animations-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        --gaydev-animations-bounce: bounce 1s infinite;
+        --gaydev-blurs-sm: 4px;
+        --gaydev-blurs-md: 8px;
+        --gaydev-blurs-lg: 12px;
+        --gaydev-blurs-xl: 16px;
+        --gaydev-blurs-2xl: 24px;
+        --gaydev-blurs-3xl: 40px;
+        --gaydev-blurs-4xl: 64px;
+        --gaydev-borders-xs: 0.5px solid;
+        --gaydev-borders-sm: 1px solid;
+        --gaydev-borders-md: 2px solid;
+        --gaydev-borders-lg: 4px solid;
+        --gaydev-borders-xl: 8px solid;
+        --gaydev-colors-transparent: transparent;
+        --gaydev-colors-current: currentColor;
+        --gaydev-colors-black: #09090B;
+        --gaydev-colors-white: #FFFFFF;
+        --gaydev-colors-white-alpha-50: rgba(255, 255, 255, 0.04);
+        --gaydev-colors-white-alpha-100: rgba(255, 255, 255, 0.06);
+        --gaydev-colors-white-alpha-200: rgba(255, 255, 255, 0.08);
+        --gaydev-colors-white-alpha-300: rgba(255, 255, 255, 0.16);
+        --gaydev-colors-white-alpha-400: rgba(255, 255, 255, 0.24);
+        --gaydev-colors-white-alpha-500: rgba(255, 255, 255, 0.36);
+        --gaydev-colors-white-alpha-600: rgba(255, 255, 255, 0.48);
+        --gaydev-colors-white-alpha-700: rgba(255, 255, 255, 0.64);
+        --gaydev-colors-white-alpha-800: rgba(255, 255, 255, 0.80);
+        --gaydev-colors-white-alpha-900: rgba(255, 255, 255, 0.92);
+        --gaydev-colors-white-alpha-950: rgba(255, 255, 255, 0.95);
+        --gaydev-colors-black-alpha-50: rgba(0, 0, 0, 0.04);
+        --gaydev-colors-black-alpha-100: rgba(0, 0, 0, 0.06);
+        --gaydev-colors-black-alpha-200: rgba(0, 0, 0, 0.08);
+        --gaydev-colors-black-alpha-300: rgba(0, 0, 0, 0.16);
+        --gaydev-colors-black-alpha-400: rgba(0, 0, 0, 0.24);
+        --gaydev-colors-black-alpha-500: rgba(0, 0, 0, 0.36);
+        --gaydev-colors-black-alpha-600: rgba(0, 0, 0, 0.48);
+        --gaydev-colors-black-alpha-700: rgba(0, 0, 0, 0.64);
+        --gaydev-colors-black-alpha-800: rgba(0, 0, 0, 0.80);
+        --gaydev-colors-black-alpha-900: rgba(0, 0, 0, 0.92);
+        --gaydev-colors-black-alpha-950: rgba(0, 0, 0, 0.95);
+        --gaydev-colors-gray-50: #fafafa;
+        --gaydev-colors-gray-100: #f4f4f5;
+        --gaydev-colors-gray-200: #e4e4e7;
+        --gaydev-colors-gray-300: #d4d4d8;
+        --gaydev-colors-gray-400: #a1a1aa;
+        --gaydev-colors-gray-500: #71717a;
+        --gaydev-colors-gray-600: #52525b;
+        --gaydev-colors-gray-700: #3f3f46;
+        --gaydev-colors-gray-800: #27272a;
+        --gaydev-colors-gray-900: #18181b;
+        --gaydev-colors-gray-950: #111111;
+        --gaydev-colors-red-50: #fef2f2;
+        --gaydev-colors-red-100: #fee2e2;
+        --gaydev-colors-red-200: #fecaca;
+        --gaydev-colors-red-300: #fca5a5;
+        --gaydev-colors-red-400: #f87171;
+        --gaydev-colors-red-500: #ef4444;
+        --gaydev-colors-red-600: #dc2626;
+        --gaydev-colors-red-700: #991919;
+        --gaydev-colors-red-800: #511111;
+        --gaydev-colors-red-900: #300c0c;
+        --gaydev-colors-red-950: #1f0808;
+        --gaydev-colors-orange-50: #fff7ed;
+        --gaydev-colors-orange-100: #ffedd5;
+        --gaydev-colors-orange-200: #fed7aa;
+        --gaydev-colors-orange-300: #fdba74;
+        --gaydev-colors-orange-400: #fb923c;
+        --gaydev-colors-orange-500: #f97316;
+        --gaydev-colors-orange-600: #ea580c;
+        --gaydev-colors-orange-700: #92310a;
+        --gaydev-colors-orange-800: #6c2710;
+        --gaydev-colors-orange-900: #3b1106;
+        --gaydev-colors-orange-950: #220a04;
+        --gaydev-colors-yellow-50: #fefce8;
+        --gaydev-colors-yellow-100: #fef9c3;
+        --gaydev-colors-yellow-200: #fef08a;
+        --gaydev-colors-yellow-300: #fde047;
+        --gaydev-colors-yellow-400: #facc15;
+        --gaydev-colors-yellow-500: #eab308;
+        --gaydev-colors-yellow-600: #ca8a04;
+        --gaydev-colors-yellow-700: #845209;
+        --gaydev-colors-yellow-800: #713f12;
+        --gaydev-colors-yellow-900: #422006;
+        --gaydev-colors-yellow-950: #281304;
+        --gaydev-colors-green-50: #f0fdf4;
+        --gaydev-colors-green-100: #dcfce7;
+        --gaydev-colors-green-200: #bbf7d0;
+        --gaydev-colors-green-300: #86efac;
+        --gaydev-colors-green-400: #4ade80;
+        --gaydev-colors-green-500: #22c55e;
+        --gaydev-colors-green-600: #16a34a;
+        --gaydev-colors-green-700: #116932;
+        --gaydev-colors-green-800: #124a28;
+        --gaydev-colors-green-900: #042713;
+        --gaydev-colors-green-950: #03190c;
+        --gaydev-colors-teal-50: #f0fdfa;
+        --gaydev-colors-teal-100: #ccfbf1;
+        --gaydev-colors-teal-200: #99f6e4;
+        --gaydev-colors-teal-300: #5eead4;
+        --gaydev-colors-teal-400: #2dd4bf;
+        --gaydev-colors-teal-500: #14b8a6;
+        --gaydev-colors-teal-600: #0d9488;
+        --gaydev-colors-teal-700: #0c5d56;
+        --gaydev-colors-teal-800: #114240;
+        --gaydev-colors-teal-900: #032726;
+        --gaydev-colors-teal-950: #021716;
+        --gaydev-colors-blue-50: #eff6ff;
+        --gaydev-colors-blue-100: #dbeafe;
+        --gaydev-colors-blue-200: #bfdbfe;
+        --gaydev-colors-blue-300: #a3cfff;
+        --gaydev-colors-blue-400: #60a5fa;
+        --gaydev-colors-blue-500: #3b82f6;
+        --gaydev-colors-blue-600: #2563eb;
+        --gaydev-colors-blue-700: #173da6;
+        --gaydev-colors-blue-800: #1a3478;
+        --gaydev-colors-blue-900: #14204a;
+        --gaydev-colors-blue-950: #0c142e;
+        --gaydev-colors-cyan-50: #ecfeff;
+        --gaydev-colors-cyan-100: #cffafe;
+        --gaydev-colors-cyan-200: #a5f3fc;
+        --gaydev-colors-cyan-300: #67e8f9;
+        --gaydev-colors-cyan-400: #22d3ee;
+        --gaydev-colors-cyan-500: #06b6d4;
+        --gaydev-colors-cyan-600: #0891b2;
+        --gaydev-colors-cyan-700: #0c5c72;
+        --gaydev-colors-cyan-800: #134152;
+        --gaydev-colors-cyan-900: #072a38;
+        --gaydev-colors-cyan-950: #051b24;
+        --gaydev-colors-purple-50: #faf5ff;
+        --gaydev-colors-purple-100: #f3e8ff;
+        --gaydev-colors-purple-200: #e9d5ff;
+        --gaydev-colors-purple-300: #d8b4fe;
+        --gaydev-colors-purple-400: #c084fc;
+        --gaydev-colors-purple-500: #a855f7;
+        --gaydev-colors-purple-600: #9333ea;
+        --gaydev-colors-purple-700: #641ba3;
+        --gaydev-colors-purple-800: #4a1772;
+        --gaydev-colors-purple-900: #2f0553;
+        --gaydev-colors-purple-950: #1a032e;
+        --gaydev-colors-pink-50: #fdf2f8;
+        --gaydev-colors-pink-100: #fce7f3;
+        --gaydev-colors-pink-200: #fbcfe8;
+        --gaydev-colors-pink-300: #f9a8d4;
+        --gaydev-colors-pink-400: #f472b6;
+        --gaydev-colors-pink-500: #ec4899;
+        --gaydev-colors-pink-600: #db2777;
+        --gaydev-colors-pink-700: #a41752;
+        --gaydev-colors-pink-800: #6d0e34;
+        --gaydev-colors-pink-900: #45061f;
+        --gaydev-colors-pink-950: #2c0514;
+        --gaydev-colors-bg-canvas: #100F12;
+        --gaydev-colors-bg-islands: #E9D8FF;
+        --gaydev-colors-bg-islands_inverse: #16141A;
+        --gaydev-colors-bg-modals: radial-gradient(59.85% 62.2% at 0% 100%, rgba(233, 216, 255, 0.05) 0%, rgba(233, 216, 255, 0.00) 100%), radial-gradient(89.27% 67.96% at 0% 0%, rgba(233, 216, 255, 0.05) 0%, rgba(233, 216, 255, 0.00) 100%), radial-gradient(68.42% 106.76% at 100% 100%, rgba(233, 216, 255, 0.05) 0%, rgba(233, 216, 255, 0.00) 100%), radial-gradient(483.05% 141.42% at 100% 100%, rgba(233, 216, 255, 0.02) 0%, rgba(233, 216, 255, 0.00) 100%), rgba(9, 9, 9, 0.80);
+        --gaydev-colors-text-primary: #F6F2FA;
+        --gaydev-colors-text-tretiary: #F6F2FA40;
+        --gaydev-colors-text-secondary: #F6F2FA70;
+        --gaydev-colors-text-white: #FFFFFF;
+        --gaydev-colors-text-fourth: #F6F2FA20;
+        --gaydev-colors-icon-primary: #F1E7FF;
+        --gaydev-colors-button-accent: radial-gradient(734.62% 100% at 0% 50%, #6945AD 0%, #7B4BD4 100%);
+        --gaydev-colors-button-accent_hover: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), radial-gradient(734.62% 100% at 0% 50%, #6945AD 0%, #7B4BD4 100%);
+        --gaydev-colors-badge-default: radial-gradient(178.96% 80% at 20% 50%, rgba(175, 168, 187, 0.00) 10.96%, rgba(175, 168, 187, 0.05) 100%), rgba(175, 168, 187, 0.05);
+        --gaydev-colors-badge-purple: radial-gradient(178.96% 80% at 20% 50%, rgba(115, 76, 187, 0.05) 10.96%, #734CBB 100%), rgba(115, 76, 187, 0.05);
+        --gaydev-colors-badge-orange: radial-gradient(176.09% 80% at 20% 50%, rgba(182, 105, 54, 0.05) 12.37%, #B66936 100%), rgba(182, 105, 54, 0.05);
+        --gaydev-colors-badge-red: radial-gradient(176.09% 80% at 20% 50%, rgba(182, 54, 54, 0.05) 12.37%, #B63C3C 100%), rgba(182, 54, 54, 0.05);
+        --gaydev-colors-stroke-accent_button: #966EE5;
+        --gaydev-colors-stroke-default: #EBF0F7;
+        --gaydev-colors-stroke-purple: rgba(115, 76, 187, 0.20);
+        --gaydev-colors-stroke-badge_default: rgba(175, 168, 187, 0.05);
+        --gaydev-colors-stroke-badge_orange: rgba(182, 105, 54, 0.20);
+        --gaydev-colors-stroke-badge_red: rgba(182, 54, 54, 0.20);
+        --gaydev-colors-stroke-sides: #312F35;
+        --gaydev-colors-other-accent: #A060FE;
+        --gaydev-colors-other-badge_orange: #FFCCAB;
+        --gaydev-colors-other-badge_green: #8AFFC7;
+        --gaydev-colors-other-badge_red: #FFABAB;
+        --gaydev-colors-upgrade-silver_grad-50: linear-gradient(90deg, rgba(200, 203, 203, 0.50) 0%, rgba(237, 238, 242, 0.50) 32.92%, rgba(187, 191, 189, 0.50) 100%);
+        --gaydev-colors-upgrade-silver_grad-100: linear-gradient(90deg, #C8CBCB 0%, #EDEEF2 32.92%, #BBBFBD 100%);
+        --gaydev-colors-upgrade-stroke-10: rgba(180, 182, 175, 0.10);
+        --gaydev-colors-upgrade-islands-1: rgba(247, 249, 243, 0.05);
+        --gaydev-colors-upgrade-secondary: #7E7F7C;
+        --gaydev-colors-upgrade-secondary_light: #989995;
+        --gaydev-colors-upgrade-accent: #B6EE5F;
+        --gaydev-colors-upgrade-primary: #EDF1E7;
+        --gaydev-colors-upgrade-skins-islands: rgba(16, 17, 20, 0.60);
+        --gaydev-durations-fastest: 50ms;
+        --gaydev-durations-faster: 100ms;
+        --gaydev-durations-fast: 150ms;
+        --gaydev-durations-moderate: 200ms;
+        --gaydev-durations-slow: 300ms;
+        --gaydev-durations-slower: 400ms;
+        --gaydev-durations-slowest: 500ms;
+        --gaydev-easings-ease-in: cubic-bezier(0.42, 0, 1, 1);
+        --gaydev-easings-ease-out: cubic-bezier(0, 0, 0.58, 1);
+        --gaydev-easings-ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
+        --gaydev-easings-ease-in-smooth: cubic-bezier(0.32, 0.72, 0, 1);
+        --gaydev-fonts-heading: "SF Pro Rounded", sans-serif;
+        --gaydev-fonts-body: "SF Pro Rounded", sans-serif;
+        --gaydev-fonts-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        --gaydev-font-sizes-2xs: 0.625rem;
+        --gaydev-font-sizes-xs: 0.75rem;
+        --gaydev-font-sizes-sm: 0.875rem;
+        --gaydev-font-sizes-md: 1rem;
+        --gaydev-font-sizes-lg: 1.125rem;
+        --gaydev-font-sizes-xl: 1.25rem;
+        --gaydev-font-sizes-2xl: 1.5rem;
+        --gaydev-font-sizes-3xl: 1.875rem;
+        --gaydev-font-sizes-4xl: 2.25rem;
+        --gaydev-font-sizes-5xl: 3rem;
+        --gaydev-font-sizes-6xl: 3.75rem;
+        --gaydev-font-sizes-7xl: 4.5rem;
+        --gaydev-font-sizes-8xl: 6rem;
+        --gaydev-font-sizes-9xl: 8rem;
+        --gaydev-font-weights-thin: 100;
+        --gaydev-font-weights-extralight: 200;
+        --gaydev-font-weights-light: 300;
+        --gaydev-font-weights-normal: 400;
+        --gaydev-font-weights-medium: 500;
+        --gaydev-font-weights-semibold: 600;
+        --gaydev-font-weights-bold: 700;
+        --gaydev-font-weights-extrabold: 800;
+        --gaydev-font-weights-black: 900;
+        --gaydev-letter-spacings-tighter: -0.05em;
+        --gaydev-letter-spacings-tight: -0.025em;
+        --gaydev-letter-spacings-wide: 0.025em;
+        --gaydev-letter-spacings-wider: 0.05em;
+        --gaydev-letter-spacings-widest: 0.1em;
+        --gaydev-line-heights-shorter: 1.25;
+        --gaydev-line-heights-short: 1.375;
+        --gaydev-line-heights-moderate: 1.5;
+        --gaydev-line-heights-tall: 1.625;
+        --gaydev-line-heights-taller: 2;
+        --gaydev-radii-none: 0;
+        --gaydev-radii-2xs: 0.0625rem;
+        --gaydev-radii-xs: 0.125rem;
+        --gaydev-radii-sm: 0.25rem;
+        --gaydev-radii-md: 0.375rem;
+        --gaydev-radii-lg: 0.5rem;
+        --gaydev-radii-xl: 0.75rem;
+        --gaydev-radii-2xl: 1rem;
+        --gaydev-radii-3xl: 1.5rem;
+        --gaydev-radii-4xl: 2rem;
+        --gaydev-radii-full: 9999px;
+        --gaydev-spacing-1: 0.25rem;
+        --gaydev-spacing-2: 0.5rem;
+        --gaydev-spacing-3: 0.75rem;
+        --gaydev-spacing-4: 1rem;
+        --gaydev-spacing-5: 1.25rem;
+        --gaydev-spacing-6: 1.5rem;
+        --gaydev-spacing-7: 1.75rem;
+        --gaydev-spacing-8: 2rem;
+        --gaydev-spacing-9: 2.25rem;
+        --gaydev-spacing-10: 2.5rem;
+        --gaydev-spacing-11: 2.75rem;
+        --gaydev-spacing-12: 3rem;
+        --gaydev-spacing-14: 3.5rem;
+        --gaydev-spacing-16: 4rem;
+        --gaydev-spacing-20: 5rem;
+        --gaydev-spacing-24: 6rem;
+        --gaydev-spacing-28: 7rem;
+        --gaydev-spacing-32: 8rem;
+        --gaydev-spacing-36: 9rem;
+        --gaydev-spacing-40: 10rem;
+        --gaydev-spacing-44: 11rem;
+        --gaydev-spacing-48: 12rem;
+        --gaydev-spacing-52: 13rem;
+        --gaydev-spacing-56: 14rem;
+        --gaydev-spacing-60: 15rem;
+        --gaydev-spacing-64: 16rem;
+        --gaydev-spacing-72: 18rem;
+        --gaydev-spacing-80: 20rem;
+        --gaydev-spacing-96: 24rem;
+        --gaydev-spacing-0\.5: 0.125rem;
+        --gaydev-spacing-1\.5: 0.375rem;
+        --gaydev-spacing-2\.5: 0.625rem;
+        --gaydev-spacing-3\.5: 0.875rem;
+        --gaydev-spacing-4\.5: 1.125rem;
+        --gaydev-sizes-1: 0.25rem;
+        --gaydev-sizes-2: 0.5rem;
+        --gaydev-sizes-3: 0.75rem;
+        --gaydev-sizes-4: 1rem;
+        --gaydev-sizes-5: 1.25rem;
+        --gaydev-sizes-6: 1.5rem;
+        --gaydev-sizes-7: 1.75rem;
+        --gaydev-sizes-8: 2rem;
+        --gaydev-sizes-9: 2.25rem;
+        --gaydev-sizes-10: 2.5rem;
+        --gaydev-sizes-11: 2.75rem;
+        --gaydev-sizes-12: 3rem;
+        --gaydev-sizes-14: 3.5rem;
+        --gaydev-sizes-16: 4rem;
+        --gaydev-sizes-20: 5rem;
+        --gaydev-sizes-24: 6rem;
+        --gaydev-sizes-28: 7rem;
+        --gaydev-sizes-32: 8rem;
+        --gaydev-sizes-36: 9rem;
+        --gaydev-sizes-40: 10rem;
+        --gaydev-sizes-44: 11rem;
+        --gaydev-sizes-48: 12rem;
+        --gaydev-sizes-52: 13rem;
+        --gaydev-sizes-56: 14rem;
+        --gaydev-sizes-60: 15rem;
+        --gaydev-sizes-64: 16rem;
+        --gaydev-sizes-72: 18rem;
+        --gaydev-sizes-80: 20rem;
+        --gaydev-sizes-96: 24rem;
+        --gaydev-sizes-3xs: 14rem;
+        --gaydev-sizes-2xs: 16rem;
+        --gaydev-sizes-xs: 20rem;
+        --gaydev-sizes-sm: 24rem;
+        --gaydev-sizes-md: 28rem;
+        --gaydev-sizes-lg: 32rem;
+        --gaydev-sizes-xl: 36rem;
+        --gaydev-sizes-2xl: 42rem;
+        --gaydev-sizes-3xl: 48rem;
+        --gaydev-sizes-4xl: 56rem;
+        --gaydev-sizes-5xl: 64rem;
+        --gaydev-sizes-6xl: 72rem;
+        --gaydev-sizes-7xl: 80rem;
+        --gaydev-sizes-8xl: 90rem;
+        --gaydev-sizes-0\.5: 0.125rem;
+        --gaydev-sizes-1\.5: 0.375rem;
+        --gaydev-sizes-2\.5: 0.625rem;
+        --gaydev-sizes-3\.5: 0.875rem;
+        --gaydev-sizes-4\.5: 1.125rem;
+        --gaydev-sizes-1\/2: 50%;
+        --gaydev-sizes-1\/3: 33.333333%;
+        --gaydev-sizes-2\/3: 66.666667%;
+        --gaydev-sizes-1\/4: 25%;
+        --gaydev-sizes-3\/4: 75%;
+        --gaydev-sizes-1\/5: 20%;
+        --gaydev-sizes-2\/5: 40%;
+        --gaydev-sizes-3\/5: 60%;
+        --gaydev-sizes-4\/5: 80%;
+        --gaydev-sizes-1\/6: 16.666667%;
+        --gaydev-sizes-2\/6: 33.333333%;
+        --gaydev-sizes-3\/6: 50%;
+        --gaydev-sizes-4\/6: 66.666667%;
+        --gaydev-sizes-5\/6: 83.333333%;
+        --gaydev-sizes-1\/12: 8.333333%;
+        --gaydev-sizes-2\/12: 16.666667%;
+        --gaydev-sizes-3\/12: 25%;
+        --gaydev-sizes-4\/12: 33.333333%;
+        --gaydev-sizes-5\/12: 41.666667%;
+        --gaydev-sizes-6\/12: 50%;
+        --gaydev-sizes-7\/12: 58.333333%;
+        --gaydev-sizes-8\/12: 66.666667%;
+        --gaydev-sizes-9\/12: 75%;
+        --gaydev-sizes-10\/12: 83.333333%;
+        --gaydev-sizes-11\/12: 91.666667%;
+        --gaydev-sizes-max: max-content;
+        --gaydev-sizes-min: min-content;
+        --gaydev-sizes-fit: fit-content;
+        --gaydev-sizes-prose: 60ch;
+        --gaydev-sizes-full: 100%;
+        --gaydev-sizes-dvh: 100dvh;
+        --gaydev-sizes-svh: 100svh;
+        --gaydev-sizes-lvh: 100lvh;
+        --gaydev-sizes-dvw: 100dvw;
+        --gaydev-sizes-svw: 100svw;
+        --gaydev-sizes-lvw: 100lvw;
+        --gaydev-sizes-vw: 100vw;
+        --gaydev-sizes-vh: 100vh;
+        --gaydev-sizes-breakpoint-sm: 480px;
+        --gaydev-sizes-breakpoint-md: 768px;
+        --gaydev-sizes-breakpoint-lg: 1024px;
+        --gaydev-sizes-breakpoint-xl: 1280px;
+        --gaydev-sizes-breakpoint-2xl: 1536px;
+        --gaydev-z-index-hide: -1;
+        --gaydev-z-index-base: 0;
+        --gaydev-z-index-docked: 10;
+        --gaydev-z-index-dropdown: 1000;
+        --gaydev-z-index-sticky: 1100;
+        --gaydev-z-index-banner: 1200;
+        --gaydev-z-index-overlay: 1300;
+        --gaydev-z-index-modal: 1400;
+        --gaydev-z-index-popover: 1500;
+        --gaydev-z-index-skip-nav: 1600;
+        --gaydev-z-index-toast: 1700;
+        --gaydev-z-index-tooltip: 1800;
+        --gaydev-z-index-max: 2147483647;
+        --gaydev-cursor-button: pointer;
+        --gaydev-cursor-checkbox: default;
+        --gaydev-cursor-disabled: not-allowed;
+        --gaydev-cursor-menuitem: default;
+        --gaydev-cursor-option: default;
+        --gaydev-cursor-radio: default;
+        --gaydev-cursor-slider: default;
+        --gaydev-cursor-switch: pointer;
+        --gaydev-breakpoints-sm: 480px;
+        --gaydev-breakpoints-md: 768px;
+        --gaydev-breakpoints-lg: 1024px;
+        --gaydev-breakpoints-xl: 1280px;
+        --gaydev-breakpoints-2xl: 1536px;
+        --gaydev-radii-l1: var(--gaydev-radii-xs);
+        --gaydev-radii-l2: var(--gaydev-radii-sm);
+        --gaydev-radii-l3: var(--gaydev-radii-md);
+    }
+
+    :root,
+    .light {
+        --gaydev-colors-bg: var(--gaydev-colors-white);
+        --gaydev-colors-bg-subtle: var(--gaydev-colors-gray-50);
+        --gaydev-colors-bg-muted: var(--gaydev-colors-gray-100);
+        --gaydev-colors-bg-emphasized: var(--gaydev-colors-gray-200);
+        --gaydev-colors-bg-inverted: var(--gaydev-colors-black);
+        --gaydev-colors-bg-panel: var(--gaydev-colors-white);
+        --gaydev-colors-bg-error: var(--gaydev-colors-red-50);
+        --gaydev-colors-bg-warning: var(--gaydev-colors-orange-50);
+        --gaydev-colors-bg-success: var(--gaydev-colors-green-50);
+        --gaydev-colors-bg-info: var(--gaydev-colors-blue-50);
+        --gaydev-colors-fg: var(--gaydev-colors-black);
+        --gaydev-colors-fg-muted: var(--gaydev-colors-gray-600);
+        --gaydev-colors-fg-subtle: var(--gaydev-colors-gray-400);
+        --gaydev-colors-fg-inverted: var(--gaydev-colors-gray-50);
+        --gaydev-colors-fg-error: var(--gaydev-colors-red-500);
+        --gaydev-colors-fg-warning: var(--gaydev-colors-orange-600);
+        --gaydev-colors-fg-success: var(--gaydev-colors-green-600);
+        --gaydev-colors-fg-info: var(--gaydev-colors-blue-600);
+        --gaydev-colors-border: var(--gaydev-colors-gray-200);
+        --gaydev-colors-border-muted: var(--gaydev-colors-gray-100);
+        --gaydev-colors-border-subtle: var(--gaydev-colors-gray-50);
+        --gaydev-colors-border-emphasized: var(--gaydev-colors-gray-300);
+        --gaydev-colors-border-inverted: var(--gaydev-colors-gray-800);
+        --gaydev-colors-border-error: var(--gaydev-colors-red-500);
+        --gaydev-colors-border-warning: var(--gaydev-colors-orange-500);
+        --gaydev-colors-border-success: var(--gaydev-colors-green-500);
+        --gaydev-colors-border-info: var(--gaydev-colors-blue-500);
+        --gaydev-colors-gray-contrast: var(--gaydev-colors-white);
+        --gaydev-colors-gray-fg: var(--gaydev-colors-gray-800);
+        --gaydev-colors-gray-subtle: var(--gaydev-colors-gray-100);
+        --gaydev-colors-gray-muted: var(--gaydev-colors-gray-200);
+        --gaydev-colors-gray-emphasized: var(--gaydev-colors-gray-300);
+        --gaydev-colors-gray-solid: var(--gaydev-colors-gray-900);
+        --gaydev-colors-gray-focus-ring: var(--gaydev-colors-gray-400);
+        --gaydev-colors-gray-border: var(--gaydev-colors-gray-200);
+        --gaydev-colors-red-contrast: white;
+        --gaydev-colors-red-fg: var(--gaydev-colors-red-700);
+        --gaydev-colors-red-subtle: var(--gaydev-colors-red-100);
+        --gaydev-colors-red-muted: var(--gaydev-colors-red-200);
+        --gaydev-colors-red-emphasized: var(--gaydev-colors-red-300);
+        --gaydev-colors-red-solid: var(--gaydev-colors-red-600);
+        --gaydev-colors-red-focus-ring: var(--gaydev-colors-red-500);
+        --gaydev-colors-red-border: var(--gaydev-colors-red-500);
+        --gaydev-colors-orange-contrast: white;
+        --gaydev-colors-orange-fg: var(--gaydev-colors-orange-700);
+        --gaydev-colors-orange-subtle: var(--gaydev-colors-orange-100);
+        --gaydev-colors-orange-muted: var(--gaydev-colors-orange-200);
+        --gaydev-colors-orange-emphasized: var(--gaydev-colors-orange-300);
+        --gaydev-colors-orange-solid: var(--gaydev-colors-orange-600);
+        --gaydev-colors-orange-focus-ring: var(--gaydev-colors-orange-500);
+        --gaydev-colors-orange-border: var(--gaydev-colors-orange-500);
+        --gaydev-colors-green-contrast: white;
+        --gaydev-colors-green-fg: var(--gaydev-colors-green-700);
+        --gaydev-colors-green-subtle: var(--gaydev-colors-green-100);
+        --gaydev-colors-green-muted: var(--gaydev-colors-green-200);
+        --gaydev-colors-green-emphasized: var(--gaydev-colors-green-300);
+        --gaydev-colors-green-solid: var(--gaydev-colors-green-600);
+        --gaydev-colors-green-focus-ring: var(--gaydev-colors-green-500);
+        --gaydev-colors-green-border: var(--gaydev-colors-green-500);
+        --gaydev-colors-blue-contrast: white;
+        --gaydev-colors-blue-fg: var(--gaydev-colors-blue-700);
+        --gaydev-colors-blue-subtle: var(--gaydev-colors-blue-100);
+        --gaydev-colors-blue-muted: var(--gaydev-colors-blue-200);
+        --gaydev-colors-blue-emphasized: var(--gaydev-colors-blue-300);
+        --gaydev-colors-blue-solid: var(--gaydev-colors-blue-600);
+        --gaydev-colors-blue-focus-ring: var(--gaydev-colors-blue-500);
+        --gaydev-colors-blue-border: var(--gaydev-colors-blue-500);
+        --gaydev-colors-yellow-contrast: black;
+        --gaydev-colors-yellow-fg: var(--gaydev-colors-yellow-800);
+        --gaydev-colors-yellow-subtle: var(--gaydev-colors-yellow-100);
+        --gaydev-colors-yellow-muted: var(--gaydev-colors-yellow-200);
+        --gaydev-colors-yellow-emphasized: var(--gaydev-colors-yellow-300);
+        --gaydev-colors-yellow-solid: var(--gaydev-colors-yellow-300);
+        --gaydev-colors-yellow-focus-ring: var(--gaydev-colors-yellow-500);
+        --gaydev-colors-yellow-border: var(--gaydev-colors-yellow-500);
+        --gaydev-colors-teal-contrast: white;
+        --gaydev-colors-teal-fg: var(--gaydev-colors-teal-700);
+        --gaydev-colors-teal-subtle: var(--gaydev-colors-teal-100);
+        --gaydev-colors-teal-muted: var(--gaydev-colors-teal-200);
+        --gaydev-colors-teal-emphasized: var(--gaydev-colors-teal-300);
+        --gaydev-colors-teal-solid: var(--gaydev-colors-teal-600);
+        --gaydev-colors-teal-focus-ring: var(--gaydev-colors-teal-500);
+        --gaydev-colors-teal-border: var(--gaydev-colors-teal-500);
+        --gaydev-colors-purple-contrast: white;
+        --gaydev-colors-purple-fg: var(--gaydev-colors-purple-700);
+        --gaydev-colors-purple-subtle: var(--gaydev-colors-purple-100);
+        --gaydev-colors-purple-muted: var(--gaydev-colors-purple-200);
+        --gaydev-colors-purple-emphasized: var(--gaydev-colors-purple-300);
+        --gaydev-colors-purple-solid: var(--gaydev-colors-purple-600);
+        --gaydev-colors-purple-focus-ring: var(--gaydev-colors-purple-500);
+        --gaydev-colors-purple-border: var(--gaydev-colors-purple-500);
+        --gaydev-colors-pink-contrast: white;
+        --gaydev-colors-pink-fg: var(--gaydev-colors-pink-700);
+        --gaydev-colors-pink-subtle: var(--gaydev-colors-pink-100);
+        --gaydev-colors-pink-muted: var(--gaydev-colors-pink-200);
+        --gaydev-colors-pink-emphasized: var(--gaydev-colors-pink-300);
+        --gaydev-colors-pink-solid: var(--gaydev-colors-pink-600);
+        --gaydev-colors-pink-focus-ring: var(--gaydev-colors-pink-500);
+        --gaydev-colors-pink-border: var(--gaydev-colors-pink-500);
+        --gaydev-colors-cyan-contrast: white;
+        --gaydev-colors-cyan-fg: var(--gaydev-colors-cyan-700);
+        --gaydev-colors-cyan-subtle: var(--gaydev-colors-cyan-100);
+        --gaydev-colors-cyan-muted: var(--gaydev-colors-cyan-200);
+        --gaydev-colors-cyan-emphasized: var(--gaydev-colors-cyan-300);
+        --gaydev-colors-cyan-solid: var(--gaydev-colors-cyan-600);
+        --gaydev-colors-cyan-focus-ring: var(--gaydev-colors-cyan-500);
+        --gaydev-colors-cyan-border: var(--gaydev-colors-cyan-500);
+        --gaydev-shadows-xs: 0px 1px 2px color-mix(in srgb, var(--gaydev-colors-gray-900) 10%, transparent), 0px 0px 1px color-mix(in srgb, var(--gaydev-colors-gray-900) 20%, transparent);
+        --gaydev-shadows-sm: 0px 2px 4px color-mix(in srgb, var(--gaydev-colors-gray-900) 10%, transparent), 0px 0px 1px color-mix(in srgb, var(--gaydev-colors-gray-900) 30%, transparent);
+        --gaydev-shadows-md: 0px 4px 8px color-mix(in srgb, var(--gaydev-colors-gray-900) 10%, transparent), 0px 0px 1px color-mix(in srgb, var(--gaydev-colors-gray-900) 30%, transparent);
+        --gaydev-shadows-lg: 0px 8px 16px color-mix(in srgb, var(--gaydev-colors-gray-900) 10%, transparent), 0px 0px 1px color-mix(in srgb, var(--gaydev-colors-gray-900) 30%, transparent);
+        --gaydev-shadows-xl: 0px 16px 24px color-mix(in srgb, var(--gaydev-colors-gray-900) 10%, transparent), 0px 0px 1px color-mix(in srgb, var(--gaydev-colors-gray-900) 30%, transparent);
+        --gaydev-shadows-2xl: 0px 24px 40px color-mix(in srgb, var(--gaydev-colors-gray-900) 16%, transparent), 0px 0px 1px color-mix(in srgb, var(--gaydev-colors-gray-900) 30%, transparent);
+        --gaydev-shadows-inner: inset 0 2px 4px 0 color-mix(in srgb, black 5%, transparent);
+        --gaydev-shadows-inset: inset 0 0 0 1px color-mix(in srgb, black 5%, transparent);
+    }
+
+    .dark,
+    .dark .chakra-theme:not(.light) {
+        --gaydev-colors-bg: var(--gaydev-colors-black);
+        --gaydev-colors-bg-subtle: var(--gaydev-colors-gray-950);
+        --gaydev-colors-bg-muted: var(--gaydev-colors-gray-900);
+        --gaydev-colors-bg-emphasized: var(--gaydev-colors-gray-800);
+        --gaydev-colors-bg-inverted: var(--gaydev-colors-white);
+        --gaydev-colors-bg-panel: var(--gaydev-colors-gray-950);
+        --gaydev-colors-bg-error: var(--gaydev-colors-red-950);
+        --gaydev-colors-bg-warning: var(--gaydev-colors-orange-950);
+        --gaydev-colors-bg-success: var(--gaydev-colors-green-950);
+        --gaydev-colors-bg-info: var(--gaydev-colors-blue-950);
+        --gaydev-colors-fg: var(--gaydev-colors-gray-50);
+        --gaydev-colors-fg-muted: var(--gaydev-colors-gray-400);
+        --gaydev-colors-fg-subtle: var(--gaydev-colors-gray-500);
+        --gaydev-colors-fg-inverted: var(--gaydev-colors-black);
+        --gaydev-colors-fg-error: var(--gaydev-colors-red-400);
+        --gaydev-colors-fg-warning: var(--gaydev-colors-orange-300);
+        --gaydev-colors-fg-success: var(--gaydev-colors-green-300);
+        --gaydev-colors-fg-info: var(--gaydev-colors-blue-300);
+        --gaydev-colors-border: var(--gaydev-colors-gray-800);
+        --gaydev-colors-border-muted: var(--gaydev-colors-gray-900);
+        --gaydev-colors-border-subtle: var(--gaydev-colors-gray-950);
+        --gaydev-colors-border-emphasized: var(--gaydev-colors-gray-700);
+        --gaydev-colors-border-inverted: var(--gaydev-colors-gray-200);
+        --gaydev-colors-border-error: var(--gaydev-colors-red-400);
+        --gaydev-colors-border-warning: var(--gaydev-colors-orange-400);
+        --gaydev-colors-border-success: var(--gaydev-colors-green-400);
+        --gaydev-colors-border-info: var(--gaydev-colors-blue-400);
+        --gaydev-colors-gray-contrast: var(--gaydev-colors-black);
+        --gaydev-colors-gray-fg: var(--gaydev-colors-gray-200);
+        --gaydev-colors-gray-subtle: var(--gaydev-colors-gray-900);
+        --gaydev-colors-gray-muted: var(--gaydev-colors-gray-800);
+        --gaydev-colors-gray-emphasized: var(--gaydev-colors-gray-700);
+        --gaydev-colors-gray-solid: var(--gaydev-colors-white);
+        --gaydev-colors-gray-focus-ring: var(--gaydev-colors-gray-400);
+        --gaydev-colors-gray-border: var(--gaydev-colors-gray-800);
+        --gaydev-colors-red-contrast: white;
+        --gaydev-colors-red-fg: var(--gaydev-colors-red-300);
+        --gaydev-colors-red-subtle: var(--gaydev-colors-red-900);
+        --gaydev-colors-red-muted: var(--gaydev-colors-red-800);
+        --gaydev-colors-red-emphasized: var(--gaydev-colors-red-700);
+        --gaydev-colors-red-solid: var(--gaydev-colors-red-600);
+        --gaydev-colors-red-focus-ring: var(--gaydev-colors-red-500);
+        --gaydev-colors-red-border: var(--gaydev-colors-red-400);
+        --gaydev-colors-orange-contrast: black;
+        --gaydev-colors-orange-fg: var(--gaydev-colors-orange-300);
+        --gaydev-colors-orange-subtle: var(--gaydev-colors-orange-900);
+        --gaydev-colors-orange-muted: var(--gaydev-colors-orange-800);
+        --gaydev-colors-orange-emphasized: var(--gaydev-colors-orange-700);
+        --gaydev-colors-orange-solid: var(--gaydev-colors-orange-500);
+        --gaydev-colors-orange-focus-ring: var(--gaydev-colors-orange-500);
+        --gaydev-colors-orange-border: var(--gaydev-colors-orange-400);
+        --gaydev-colors-green-contrast: white;
+        --gaydev-colors-green-fg: var(--gaydev-colors-green-300);
+        --gaydev-colors-green-subtle: var(--gaydev-colors-green-900);
+        --gaydev-colors-green-muted: var(--gaydev-colors-green-800);
+        --gaydev-colors-green-emphasized: var(--gaydev-colors-green-700);
+        --gaydev-colors-green-solid: var(--gaydev-colors-green-600);
+        --gaydev-colors-green-focus-ring: var(--gaydev-colors-green-500);
+        --gaydev-colors-green-border: var(--gaydev-colors-green-400);
+        --gaydev-colors-blue-contrast: white;
+        --gaydev-colors-blue-fg: var(--gaydev-colors-blue-300);
+        --gaydev-colors-blue-subtle: var(--gaydev-colors-blue-900);
+        --gaydev-colors-blue-muted: var(--gaydev-colors-blue-800);
+        --gaydev-colors-blue-emphasized: var(--gaydev-colors-blue-700);
+        --gaydev-colors-blue-solid: var(--gaydev-colors-blue-600);
+        --gaydev-colors-blue-focus-ring: var(--gaydev-colors-blue-500);
+        --gaydev-colors-blue-border: var(--gaydev-colors-blue-400);
+        --gaydev-colors-yellow-contrast: black;
+        --gaydev-colors-yellow-fg: var(--gaydev-colors-yellow-300);
+        --gaydev-colors-yellow-subtle: var(--gaydev-colors-yellow-900);
+        --gaydev-colors-yellow-muted: var(--gaydev-colors-yellow-800);
+        --gaydev-colors-yellow-emphasized: var(--gaydev-colors-yellow-700);
+        --gaydev-colors-yellow-solid: var(--gaydev-colors-yellow-300);
+        --gaydev-colors-yellow-focus-ring: var(--gaydev-colors-yellow-500);
+        --gaydev-colors-yellow-border: var(--gaydev-colors-yellow-500);
+        --gaydev-colors-teal-contrast: white;
+        --gaydev-colors-teal-fg: var(--gaydev-colors-teal-300);
+        --gaydev-colors-teal-subtle: var(--gaydev-colors-teal-900);
+        --gaydev-colors-teal-muted: var(--gaydev-colors-teal-800);
+        --gaydev-colors-teal-emphasized: var(--gaydev-colors-teal-700);
+        --gaydev-colors-teal-solid: var(--gaydev-colors-teal-600);
+        --gaydev-colors-teal-focus-ring: var(--gaydev-colors-teal-500);
+        --gaydev-colors-teal-border: var(--gaydev-colors-teal-400);
+        --gaydev-colors-purple-contrast: white;
+        --gaydev-colors-purple-fg: var(--gaydev-colors-purple-300);
+        --gaydev-colors-purple-subtle: var(--gaydev-colors-purple-900);
+        --gaydev-colors-purple-muted: var(--gaydev-colors-purple-800);
+        --gaydev-colors-purple-emphasized: var(--gaydev-colors-purple-700);
+        --gaydev-colors-purple-solid: var(--gaydev-colors-purple-600);
+        --gaydev-colors-purple-focus-ring: var(--gaydev-colors-purple-500);
+        --gaydev-colors-purple-border: var(--gaydev-colors-purple-400);
+        --gaydev-colors-pink-contrast: white;
+        --gaydev-colors-pink-fg: var(--gaydev-colors-pink-300);
+        --gaydev-colors-pink-subtle: var(--gaydev-colors-pink-900);
+        --gaydev-colors-pink-muted: var(--gaydev-colors-pink-800);
+        --gaydev-colors-pink-emphasized: var(--gaydev-colors-pink-700);
+        --gaydev-colors-pink-solid: var(--gaydev-colors-pink-600);
+        --gaydev-colors-pink-focus-ring: var(--gaydev-colors-pink-500);
+        --gaydev-colors-pink-border: var(--gaydev-colors-pink-400);
+        --gaydev-colors-cyan-contrast: white;
+        --gaydev-colors-cyan-fg: var(--gaydev-colors-cyan-300);
+        --gaydev-colors-cyan-subtle: var(--gaydev-colors-cyan-900);
+        --gaydev-colors-cyan-muted: var(--gaydev-colors-cyan-800);
+        --gaydev-colors-cyan-emphasized: var(--gaydev-colors-cyan-700);
+        --gaydev-colors-cyan-solid: var(--gaydev-colors-cyan-600);
+        --gaydev-colors-cyan-focus-ring: var(--gaydev-colors-cyan-500);
+        --gaydev-colors-cyan-border: var(--gaydev-colors-cyan-400);
+        --gaydev-shadows-xs: 0px 1px 1px color-mix(in srgb, black 64%, transparent), 0px 0px 1px inset color-mix(in srgb, var(--gaydev-colors-gray-300) 20%, transparent);
+        --gaydev-shadows-sm: 0px 2px 4px color-mix(in srgb, black 64%, transparent), 0px 0px 1px inset color-mix(in srgb, var(--gaydev-colors-gray-300) 30%, transparent);
+        --gaydev-shadows-md: 0px 4px 8px color-mix(in srgb, black 64%, transparent), 0px 0px 1px inset color-mix(in srgb, var(--gaydev-colors-gray-300) 30%, transparent);
+        --gaydev-shadows-lg: 0px 8px 16px color-mix(in srgb, black 64%, transparent), 0px 0px 1px inset color-mix(in srgb, var(--gaydev-colors-gray-300) 30%, transparent);
+        --gaydev-shadows-xl: 0px 16px 24px color-mix(in srgb, black 64%, transparent), 0px 0px 1px inset color-mix(in srgb, var(--gaydev-colors-gray-300) 30%, transparent);
+        --gaydev-shadows-2xl: 0px 24px 40px color-mix(in srgb, black 64%, transparent), 0px 0px 1px inset color-mix(in srgb, var(--gaydev-colors-gray-300) 30%, transparent);
+        --gaydev-shadows-inner: inset 0 2px 4px 0 black;
+        --gaydev-shadows-inset: inset 0 0 0 1px color-mix(in srgb, var(--gaydev-colors-gray-300) 5%, transparent);
+    }
+}
+
+@media screen and (max-width: 47.9975rem) {
+    .css-1j2htvn {
+        inset-inline: var(--gaydev-spacing-4);
+    }
+}
+
+.css-h9m4ju {
+    position: relative;
+    height: 100svh;
+}
+
+.css-8azc7e {
+    position: absolute;
+    width: var(--gaydev-sizes-full);
+    height: var(--gaydev-sizes-full);
+    background-image: url("../../public/assets/opening-DD9ysBv7.svg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    transition-property: opacity;
+    transition-duration: var(--gaydev-durations-slowest);
+    opacity: 0;
+    z-index: 1;
+}
+
+.css-1yexge1 {
+    height: var(--gaydev-sizes-full);
+}
+
+@layer recipes {
+    .css-1yexge1 {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+}
+
+.css-1c6q0zb {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--gaydev-spacing-8);
+    text-align: center;
+    max-width: 300px;
+    min-width: 300px;
+    z-index: 2;
+}
+
+.css-17ch6t1 {
+    object-fit: cover;
+    height: 100px;
+}
+
+.css-wxd2c5 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gaydev-spacing-1);
+    width: var(--gaydev-sizes-full);
+}
+
+.css-kxlpf4 {
+    width: var(--gaydev-sizes-full);
+    padding: var(--gaydev-spacing-1);
+}
+
+@layer recipes {
+    .css-kxlpf4 {
+        font-size: var(--gaydev-font-sizes-sm);
+        line-height: 1.25rem;
+        position: relative;
+    }
+}
+
+.css-lgdcxf {
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.19);
+    --bg-currentcolor: #00000030;
+    box-shadow: none;
+}
+
+@layer recipes {
+    .css-lgdcxf {
+        overflow: hidden;
+        position: relative;
+        box-shadow: var(--gaydev-shadows-inset);
+        background-color: var(--gaydev-colors-bg-muted);
+        --bg-currentcolor: var(--gaydev-colors-bg-muted);
+        height: var(--gaydev-sizes-2\.5);
+        border-radius: var(--gaydev-radii-l1);
+    }
+}
+
+.css-cpx2q0 {
+    background-color: rgb(186, 144, 249);
+    --bg-currentcolor: #BA90F9;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 2px 0px inset;
+}
+
+@layer recipes {
+    .css-cpx2q0 {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        transition-property: width, height;
+        transition-duration: var(--gaydev-durations-slow);
+        height: 100%;
+        background-color: var(--gaydev-colors-color-palette-solid);
+        --bg-currentcolor: var(--gaydev-colors-color-palette-solid);
+    }
+
+    .css-cpx2q0:is(:indeterminate, [data-indeterminate], [aria-checked="mixed"], [data-state="indeterminate"]) {
+        --animate-from-x: -40%;
+        --animate-to-x: 100%;
+        position: absolute;
+        will-change: left;
+        min-width: 50%;
+        animation: 1s ease 0s infinite normal none running position;
+        background-image: linear-gradient(to right, transparent 0%, var(--track-color) 50%, transparent 100%);
+    }
+}
+
+.css-109t09u {
+    font-size: var(--gaydev-font-sizes-sm);
+    color: var(--gaydev-colors-text-tretiary);
+    font-weight: 400;
+    text-align: center;
+}
+
+.css-17vg1ae {
+    backdrop-filter: blur(4px);
+}
+
+@layer recipes {
+    .css-17vg1ae {
+        background: var(--gaydev-colors-black-alpha-500);
+        --bg-currentcolor: var(--gaydev-colors-black-alpha-500);
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100dvw;
+        height: 100dvh;
+        --dialog-z-index: var(--gaydev-z-index-popover);
+        z-index: calc(var(--dialog-z-index) + var(--layer-index, 0) - 1);
+    }
+
+    .css-17vg1ae:is([open], [data-open], [data-state="open"]) {
+        animation-name: fade-in;
+        animation-duration: var(--gaydev-durations-slow);
+    }
+
+    .css-17vg1ae:is([closed], [data-closed], [data-state="closed"]) {
+        animation-name: fade-out;
+        animation-duration: var(--gaydev-durations-moderate);
+    }
+}
+
+@layer recipes {
+    .css-13yfqy0 {
+        display: flex;
+        width: 100dvw;
+        height: 100dvh;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        --dialog-z-index: var(--gaydev-z-index-popover);
+        z-index: calc(var(--dialog-z-index) + var(--layer-index, 0));
+        -webkit-box-pack: center;
+        justify-content: center;
+        overscroll-behavior-y: none;
+        overflow: auto;
+        pointer-events: auto;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+}
+
+.css-7bt3u5 {
+    position: absolute;
+    width: var(--gaydev-sizes-full);
+    height: var(--gaydev-sizes-full);
+    background-image: url("../../public/assets/opening-DD9ysBv7.svg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    transition-property: opacity;
+    transition-duration: var(--gaydev-durations-slowest);
+    opacity: 100;
+    z-index: 1;
+}
+
+.css-irwvew {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+.css-19gf21q {
+    z-index: var(--gaydev-z-index-sticky);
+    --mix-backgroundColor: color-mix(in srgb, var(--gaydev-colors-bg-islands) 05%, transparent);
+    background-color: var(--mix-backgroundColor, var(--gaydev-colors-bg-islands));
+    --bg-currentcolor: var(--mix-backgroundColor, var(--gaydev-colors-bg-islands));
+    border-radius: 0px 0px 32px 32px;
+    backdrop-filter: blur(16px);
+    position: fixed;
+    width: var(--gaydev-sizes-full);
+}
+
+@layer recipes {
+    .css-19gf21q {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+}
+
+.css-1i8f8ty {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 0.5rem;
+    max-width: var(--gaydev-sizes-8xl);
+    width: var(--gaydev-sizes-full);
+    padding-inline: var(--gaydev-spacing-8);
+    padding-top: var(--gaydev-spacing-5);
+    padding-bottom: var(--gaydev-spacing-5);
+    user-select: none;
+}
+
+.css-ppb4ub {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--gaydev-spacing-16);
+}
+
+.css-1syfr4j {
+    object-fit: cover;
+    height: 42px;
+}
+
+.css-6izshx {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--gaydev-spacing-8);
+}
+
+.css-me1bio {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--gaydev-spacing-1);
+    text-align: center;
+    cursor: pointer;
+}
+
+.css-1uurmyh {
+    width: 24px;
+    height: 24px;
+}
+
+@layer recipes {
+    .css-1uurmyh {
+        display: inline-block;
+        line-height: 1em;
+        flex-shrink: 0;
+        color: currentcolor;
+        vertical-align: middle;
+    }
+}
+
+.css-1ogc5ay {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.css-dnewz7 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--gaydev-spacing-4);
+}
+
+@media screen and (min-width: 30rem) {
+    .css-dnewz7 {
+        gap: var(--gaydev-spacing-8);
+    }
+}
+
+.css-1xfpdei {
+    position: relative;
+    isolation: isolate;
+    padding: 16px 32px;
+    height: 52px;
+    border-radius: 20px;
+    background: var(--gaydev-colors-button-accent);
+    --bg-currentcolor: var(--gaydev-colors-button-accent);
+    color: var(--gaydev-colors-text-primary);
+    font-size: 16px;
+    font-weight: 700;
+    border-width: 1.5px;
+    border-style: solid;
+    border-image: none;
+    border-color: var(--gaydev-colors-stroke-accent_button);
+}
+
+@layer recipes {
+    .css-1xfpdei {
+        display: inline-flex;
+        appearance: none;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        user-select: none;
+        position: relative;
+        border-radius: var(--gaydev-radii-l2);
+        white-space: nowrap;
+        vertical-align: middle;
+        border-width: 1px;
+        border-color: var(--gaydev-colors-transparent);
+        cursor: var(--gaydev-cursor-button);
+        flex-shrink: 0;
+        outline: 0px;
+        line-height: 1.25rem;
+        isolation: isolate;
+        font-weight: var(--gaydev-font-weights-medium);
+        transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, translate, transform;
+        transition-duration: var(--gaydev-durations-moderate);
+        --focus-ring-color: var(--gaydev-colors-color-palette-focus-ring);
+        height: var(--gaydev-sizes-10);
+        min-width: var(--gaydev-sizes-10);
+        font-size: var(--gaydev-font-sizes-sm);
+        padding-inline: var(--gaydev-spacing-4);
+        gap: var(--gaydev-spacing-2);
+        background: var(--gaydev-colors-color-palette-solid);
+        --bg-currentcolor: var(--gaydev-colors-color-palette-solid);
+        color: var(--gaydev-colors-color-palette-contrast);
+    }
+
+    .css-1xfpdei:is(:focus-visible, [data-focus-visible]) {
+        outline-width: var(--focus-ring-width, 2px);
+        outline-offset: var(--focus-ring-offset, 2px);
+        outline-style: var(--focus-ring-style, solid);
+        outline-color: var(--focus-ring-color);
+    }
+
+    .css-1xfpdei:is(:disabled, [disabled], [data-disabled], [aria-disabled="true"]) {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    .css-1xfpdei :where(svg) {
+        flex-shrink: 0;
+        width: var(--gaydev-sizes-5);
+        height: var(--gaydev-sizes-5);
+    }
+
+    .css-1xfpdei:is([aria-expanded="true"], [data-expanded], [data-state="expanded"]) {
+        --mix-background: color-mix(in srgb, var(--gaydev-colors-color-palette-solid) 90%, transparent);
+        background: var(--mix-background, var(--gaydev-colors-color-palette-solid));
+        --bg-currentcolor: var(--mix-background, var(--gaydev-colors-color-palette-solid));
+    }
+
+    @media (hover: hover) {
+        .css-1xfpdei:is(:hover, [data-hover]):not(:disabled, [data-disabled]) {
+            --mix-background: color-mix(in srgb, var(--gaydev-colors-color-palette-solid) 90%, transparent);
+            background: var(--mix-background, var(--gaydev-colors-color-palette-solid));
+            --bg-currentcolor: var(--mix-background, var(--gaydev-colors-color-palette-solid));
+        }
+    }
+}
+
+.css-1xfpdei::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    z-index: -1;
+    border-radius: inherit;
+    background: var(--gaydev-colors-button-accent_hover);
+    --bg-currentcolor: var(--gaydev-colors-button-accent_hover);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.css-1xfpdei:is(:disabled, [disabled], [data-disabled], [aria-disabled="true"]) {
+    opacity: 0.4;
+}
+
+.css-1xfpdei :where(svg) {
+    width: 27px;
+    height: 32px;
+}
+
+@media (hover: hover) {
+    .css-1xfpdei:is(:hover, [data-hover]):not(:disabled, [data-disabled])::before {
+        opacity: 1;
+    }
+}
+
+.css-e0a3cc {
+    flex: 1 1 0%;
+    padding-top: 96px;
+    padding-bottom: 24px;
+}
+
+.css-mkcck1 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--gaydev-spacing-1);
+    padding-left: var(--gaydev-spacing-2);
+    overflow: hidden;
+    position: relative;
+}
+
+.css-qdafdy {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 112px;
+    height: 112px;
+    flex-shrink: 0;
+}
+
+.css-1nkq3qi {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 6px;
+    height: 44px;
+    width: var(--gaydev-sizes-full);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 137, 59, 0.2);
+    background: radial-gradient(88.8px 78.7px at 22.2px 22px, rgba(0, 184, 95, 0.05) 10.96%, rgba(0, 201, 104, 0.6) 100%), rgba(0, 137, 71, 0.05);
+    --bg-currentcolor: radial-gradient(88.8px 78.7px at 22.2px 22px, rgba(0, 184, 95, 0.05) 10.96%, rgba(0, 201, 104, 0.6) 100%), rgba(0, 137, 71, 0.05);
+    overflow: hidden;
+    color: var(--gaydev-colors-other-badge_green);
+    flex-shrink: 0;
+}
+
+.css-1ib1ydr {
+    font-size: var(--gaydev-font-sizes-sm);
+    font-weight: 600;
+}
+
+.css-usapyr {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    padding: 4px;
+    flex: 1 1 0%;
+    width: var(--gaydev-sizes-full);
+    min-height: 0px;
+    --mix-background: color-mix(in srgb, var(--gaydev-colors-bg-islands) 05%, transparent);
+    background: var(--mix-background, var(--gaydev-colors-bg-islands));
+    --bg-currentcolor: var(--mix-background, var(--gaydev-colors-bg-islands));
+    backdrop-filter: blur(16px);
+    border-radius: 16px;
+}
+
+.css-1sjq1ul {
+    flex: 1 1 0%;
+    height: var(--gaydev-sizes-full);
+    border-radius: 12px;
+    cursor: pointer;
+    background: var(--gaydev-colors-transparent);
+    --bg-currentcolor: var(--gaydev-colors-transparent);
+    border-width: 1px;
+    border-style: solid;
+    border-image: none;
+    border-color: var(--gaydev-colors-transparent);
+    --mix-color: color-mix(in srgb, var(--gaydev-colors-bg-islands) 20%, transparent);
+    color: var(--mix-color, var(--gaydev-colors-bg-islands));
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+@layer recipes {
+    .css-1sjq1ul {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+}
+
+@media (hover: hover) {
+    .css-1sjq1ul:is(:hover, [data-hover]):not(:disabled, [data-disabled]) {
+        --mix-color: color-mix(in srgb, var(--gaydev-colors-bg-islands) 40%, transparent);
+        color: var(--mix-color, var(--gaydev-colors-bg-islands));
+    }
+}
+
+.css-1eyux4z {
+    flex: 1 1 0%;
+    height: var(--gaydev-sizes-full);
+    border-radius: 12px;
+    cursor: pointer;
+    --mix-background: color-mix(in srgb, var(--gaydev-colors-bg-islands) 10%, transparent);
+    background: var(--mix-background, var(--gaydev-colors-bg-islands));
+    --bg-currentcolor: var(--mix-background, var(--gaydev-colors-bg-islands));
+    border-width: 1px;
+    border-style: solid;
+    border-image: none;
+    --mix-borderColor: color-mix(in srgb, var(--gaydev-colors-stroke-default) 10%, transparent);
+    border-color: var(--mix-borderColor, var(--gaydev-colors-stroke-default));
+    color: var(--gaydev-colors-other-accent);
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+@layer recipes {
+    .css-1eyux4z {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+}
+
+.css-3j3bba {
+    --mix-background: color-mix(in srgb, var(--gaydev-colors-bg-islands) 05%, transparent);
+    background-attachment: ;
+    background-origin: ;
+    background-clip: ;
+    background-color: ;
+    --bg-currentcolor: var(--mix-background, var(--gaydev-colors-bg-islands));
+    backdrop-filter: blur(16px);
+    border-radius: 20px;
+    position: relative;
+    text-align: start;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 164px;
+    height: 112px;
+    min-width: 164px;
+    max-width: 164px;
+    min-height: 112px;
+    max-height: 112px;
+    user-select: none;
+    animation-name: slide-from-bottom, fade-in;
+    animation-duration: 0.25s;
+    animation-timing-function: var(--gaydev-easings-ease-out);
+    background-image: url("../../public/assets/most_ancient-yjQzIrWo.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.css-q0inqt {
+    position: absolute;
+    top: 8px;
+    inset-inline: 0px;
+}
+
+@layer recipes {
+    .css-q0inqt {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+}
+
+.css-l43g55 {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    right: 8px;
+}
+
+.css-1kdp9b {
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@layer recipes {
+    .css-1kdp9b {
+        font-family: var(--gaydev-fonts-heading);
+        font-weight: var(--gaydev-font-weights-semibold);
+        font-size: var(--gaydev-font-sizes-sm);
+        line-height: 1.25rem;
+    }
+}
+
+.css-1otgfav {
+    font-weight: 400;
+    color: var(--gaydev-colors-text-tretiary);
+    font-size: var(--gaydev-font-sizes-xs);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.css-1eivj6r {
+    --mix-background: color-mix(in srgb, var(--gaydev-colors-bg-islands) 05%, transparent);
+    background-attachment: ;
+    background-origin: ;
+    background-clip: ;
+    background-color: ;
+    --bg-currentcolor: var(--mix-background, var(--gaydev-colors-bg-islands));
+    backdrop-filter: blur(16px);
+    border-radius: 20px;
+    position: relative;
+    text-align: start;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 164px;
+    height: 112px;
+    min-width: 164px;
+    max-width: 164px;
+    min-height: 112px;
+    max-height: 112px;
+    user-select: none;
+    animation-name: slide-from-bottom, fade-in;
+    animation-duration: 0.25s;
+    animation-timing-function: var(--gaydev-easings-ease-out);
+    background-image: url("../../public/assets/ancient-Bs3b-m8t.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.css-1endqnl {
+    --mix-background: color-mix(in srgb, var(--gaydev-colors-bg-islands) 05%, transparent);
+    background-attachment: ;
+    background-origin: ;
+    background-clip: ;
+    background-color: ;
+    --bg-currentcolor: var(--mix-background, var(--gaydev-colors-bg-islands));
+    backdrop-filter: blur(16px);
+    border-radius: 20px;
+    position: relative;
+    text-align: start;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 164px;
+    height: 112px;
+    min-width: 164px;
+    max-width: 164px;
+    min-height: 112px;
+    max-height: 112px;
+    user-select: none;
+    animation-name: slide-from-bottom, fade-in;
+    animation-duration: 0.25s;
+    animation-timing-function: var(--gaydev-easings-ease-out);
+    background-image: url("../../public/assets/mythical-Do4LthRH.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.css-gdegvg {
+    --mix-background: color-mix(in srgb, var(--gaydev-colors-bg-islands) 05%, transparent);
+    background-attachment: ;
+    background-origin: ;
+    background-clip: ;
+    background-color: ;
+    --bg-currentcolor: var(--mix-background, var(--gaydev-colors-bg-islands));
+    backdrop-filter: blur(16px);
+    border-radius: 20px;
+    position: relative;
+    text-align: start;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 164px;
+    height: 112px;
+    min-width: 164px;
+    max-width: 164px;
+    min-height: 112px;
+    max-height: 112px;
+    user-select: none;
+    animation-name: slide-from-bottom, fade-in;
+    animation-duration: 0.25s;
+    animation-timing-function: var(--gaydev-easings-ease-out);
+    background-image: url("../../public/assets/legendary-2LpAiDdH.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.css-ru0yoa {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 120px;
+    pointer-events: none;
+    background: linear-gradient(270deg, rgb(16, 15, 18) 0%, rgba(16, 15, 18, 0) 100%);
+    --bg-currentcolor: linear-gradient(270deg, #100F12 0%, rgba(16, 15, 18, 0) 100%);
+}
+
+.css-vkrp37 {
+    padding-inline: var(--gaydev-spacing-4);
+    max-width: var(--gaydev-sizes-full);
+}
+
+@layer recipes {
+    .css-vkrp37 {
+        position: relative;
+        max-width: var(--gaydev-sizes-8xl);
+        width: 100%;
+        margin-inline: auto;
+        padding-inline: var(--gaydev-spacing-4);
+    }
+
+    @media screen and (min-width: 48rem) {
+        .css-vkrp37 {
+            padding-inline: var(--gaydev-spacing-6);
+        }
+    }
+
+    @media screen and (min-width: 64rem) {
+        .css-vkrp37 {
+            padding-inline: var(--gaydev-spacing-8);
+        }
+    }
+}
+
+@media screen and (min-width: 30rem) {
+    .css-vkrp37 {
+        padding-inline: var(--gaydev-spacing-8);
+        max-width: var(--gaydev-sizes-full);
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .css-vkrp37 {
+        max-width: var(--gaydev-sizes-full);
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .css-vkrp37 {
+        max-width: var(--gaydev-sizes-full);
+    }
+}
+
+@media screen and (min-width: 80rem) {
+    .css-vkrp37 {
+        max-width: var(--gaydev-sizes-8xl);
+    }
+}
+
+.css-lnjfw6 {
+    margin-top: var(--gaydev-spacing-8);
+}
+
+.css-xmgju1 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gaydev-spacing-16);
+}
+
+.css-1itj1qp {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gaydev-spacing-8);
+    position: relative;
+    isolation: isolate;
+}
+
+.css-1n2tucu {
+    mask-image: linear-gradient(transparent 0%, black 17%, black 83%, transparent 100%);
+    position: absolute;
+    top: -16px;
+    bottom: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: -1;
+    opacity: 0.5;
+    isolation: isolate;
+    pointer-events: none;
+    user-select: none;
+}
+
+.css-1a7o2e8 {
+    object-fit: cover;
+    width: var(--gaydev-sizes-full);
+    height: var(--gaydev-sizes-full);
+}
+
+.css-3ratul {
+    position: absolute;
+    inset: 0px;
+    background: rgb(37, 35, 41);
+    --bg-currentcolor: #252329;
+    mix-blend-mode: hard-light;
+}
+
+.css-123j7aa {
+    position: absolute;
+    inset: 0px;
+    background: rgb(37, 35, 41);
+    --bg-currentcolor: #252329;
+    mix-blend-mode: color;
+}
+
+.css-199m75w {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: var(--gaydev-spacing-4);
+    padding-top: var(--gaydev-spacing-3);
+    padding-bottom: var(--gaydev-spacing-3);
+}
+
+.css-1tinpmz {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    transform: rotate(45deg);
+    background: rgb(98, 67, 164);
+    --bg-currentcolor: #6243A4;
+    box-shadow: rgba(186, 166, 216, 0.2) 0px -2px 4px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 4px 0px inset;
+}
+
+.css-12o4fh3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Santa Maria Sans";
+    font-weight: 900;
+    font-size: 24px;
+    line-height: normal;
+    background-image: linear-gradient(98deg, rgb(234, 230, 239) 1.01%, rgb(216, 211, 222) 53.25%, rgb(246, 242, 250) 71.83%, rgb(193, 185, 200) 90.4%, rgb(246, 242, 250) 100.67%);
+    color: var(--gaydev-colors-transparent);
+    background-clip: text;
+    filter: drop-shadow(rgba(255, 255, 255, 0.25) 0px 4px 48px);
+}
+
+@layer recipes {
+    .css-12o4fh3 {
+        font-family: var(--gaydev-fonts-heading);
+        font-weight: var(--gaydev-font-weights-semibold);
+        font-size: var(--gaydev-font-sizes-xl);
+        line-height: 1.875rem;
+    }
+}
+
+@media screen and (min-width: 30rem) {
+    .css-12o4fh3 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .css-12o4fh3 {
+        font-size: 32px;
+    }
+}
+
+.css-1psz8np {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    column-gap: 0px;
+    row-gap: var(--gaydev-spacing-8);
+}
+
+@media screen and (min-width: 30rem) {
+    .css-1psz8np {
+        grid-template-columns: repeat(2, minmax(0px, 1fr));
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .css-1psz8np {
+        grid-template-columns: repeat(3, minmax(0px, 1fr));
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .css-1psz8np {
+        grid-template-columns: repeat(4, minmax(0px, 1fr));
+    }
+}
+
+@media screen and (min-width: 80rem) {
+    .css-1psz8np {
+        grid-template-columns: repeat(5, minmax(0px, 1fr));
+    }
+}
+
+.css-1b9ejki {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0px;
+    text-align: center;
+    max-width: 360px;
+    flex: 1 0 0px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.css-17deg6c {
+    font-weight: 600;
+    font-size: var(--gaydev-font-sizes-lg);
+    text-align: center;
+    width: var(--gaydev-sizes-full);
+}
+
+@layer recipes {
+    .css-17deg6c {
+        font-family: var(--gaydev-fonts-heading);
+        font-weight: var(--gaydev-font-weights-semibold);
+        font-size: var(--gaydev-font-sizes-xl);
+        line-height: 1.875rem;
+    }
+}
+
+@layer recipes {
+    .css-d82rsv {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+}
+
+.css-1gnkwoi {
+    position: relative;
+    isolation: isolate;
+    padding: 16px 12px 16px 16px;
+    height: 46px;
+    border-radius: 20px;
+    --mix-background: color-mix(in srgb, var(--gaydev-colors-bg-islands) 05%, transparent);
+    background: var(--mix-background, var(--gaydev-colors-bg-islands));
+    --bg-currentcolor: var(--mix-background, var(--gaydev-colors-bg-islands));
+    color: var(--gaydev-colors-text-primary);
+    font-size: 16px;
+    font-weight: 600;
+    border-width: 1.5px;
+    border-style: solid;
+    border-image: none;
+    --mix-borderColor: color-mix(in srgb, var(--gaydev-colors-stroke-default) 05%, transparent);
+    border-color: var(--mix-borderColor, var(--gaydev-colors-stroke-default));
+    overflow: hidden;
+}
+
+@layer recipes {
+    .css-1gnkwoi {
+        display: inline-flex;
+        appearance: none;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        user-select: none;
+        position: relative;
+        border-radius: var(--gaydev-radii-l2);
+        white-space: nowrap;
+        vertical-align: middle;
+        border-width: 1px;
+        border-color: var(--gaydev-colors-transparent);
+        cursor: var(--gaydev-cursor-button);
+        flex-shrink: 0;
+        outline: 0px;
+        line-height: 1.25rem;
+        isolation: isolate;
+        font-weight: var(--gaydev-font-weights-medium);
+        transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, translate, transform;
+        transition-duration: var(--gaydev-durations-moderate);
+        --focus-ring-color: var(--gaydev-colors-color-palette-focus-ring);
+        height: var(--gaydev-sizes-10);
+        min-width: var(--gaydev-sizes-10);
+        font-size: var(--gaydev-font-sizes-sm);
+        padding-inline: var(--gaydev-spacing-4);
+        gap: var(--gaydev-spacing-2);
+        background: var(--gaydev-colors-color-palette-solid);
+        --bg-currentcolor: var(--gaydev-colors-color-palette-solid);
+        color: var(--gaydev-colors-color-palette-contrast);
+    }
+
+    .css-1gnkwoi:is(:focus-visible, [data-focus-visible]) {
+        outline-width: var(--focus-ring-width, 2px);
+        outline-offset: var(--focus-ring-offset, 2px);
+        outline-style: var(--focus-ring-style, solid);
+        outline-color: var(--focus-ring-color);
+    }
+
+    .css-1gnkwoi:is(:disabled, [disabled], [data-disabled], [aria-disabled="true"]) {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    .css-1gnkwoi :where(svg) {
+        flex-shrink: 0;
+        width: var(--gaydev-sizes-5);
+        height: var(--gaydev-sizes-5);
+    }
+
+    .css-1gnkwoi:is([aria-expanded="true"], [data-expanded], [data-state="expanded"]) {
+        --mix-background: color-mix(in srgb, var(--gaydev-colors-color-palette-solid) 90%, transparent);
+        background: var(--mix-background, var(--gaydev-colors-color-palette-solid));
+        --bg-currentcolor: var(--mix-background, var(--gaydev-colors-color-palette-solid));
+    }
+
+    @media (hover: hover) {
+        .css-1gnkwoi:is(:hover, [data-hover]):not(:disabled, [data-disabled]) {
+            --mix-background: color-mix(in srgb, var(--gaydev-colors-color-palette-solid) 90%, transparent);
+            background: var(--mix-background, var(--gaydev-colors-color-palette-solid));
+            --bg-currentcolor: var(--mix-background, var(--gaydev-colors-color-palette-solid));
+        }
+    }
+}
+
+.css-1gnkwoi::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    z-index: -1;
+    border-radius: inherit;
+    --mix-background: color-mix(in srgb, var(--gaydev-colors-bg-islands) 10%, transparent);
+    background: var(--mix-background, var(--gaydev-colors-bg-islands));
+    --bg-currentcolor: var(--mix-background, var(--gaydev-colors-bg-islands));
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.css-1gnkwoi:is(:disabled, [disabled], [data-disabled], [aria-disabled="true"]) {
+    opacity: 0.4;
+}
+
+.css-1gnkwoi :where(svg) {
+    width: 27px;
+    height: 32px;
+}
+
+@media (hover: hover) {
+    .css-1gnkwoi:is(:hover, [data-hover]):not(:disabled, [data-disabled])::before {
+        opacity: 1;
+    }
+}
+
+.css-1r5z4zg {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--gaydev-spacing-1);
+}
+
+.css-7boy05 {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-1wr7wci {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 41px;
+    height: 41px;
+    border-radius: var(--gaydev-radii-full);
+    background: rgb(150, 79, 255);
+    --bg-currentcolor: #964FFF;
+    filter: blur(20px);
+    pointer-events: none;
+}
+
+.css-vhetzl {
+    margin-top: var(--gaydev-spacing-16);
+    position: relative;
+    overflow: hidden;
+    border-top-width: 1px;
+    border-top-style: solid;
+    --mix-borderColor: color-mix(in srgb, var(--gaydev-colors-stroke-default) 05%, transparent);
+    border-color: var(--mix-borderColor, var(--gaydev-colors-stroke-default));
+    background-color: var(--gaydev-colors-bg-canvas);
+    --bg-currentcolor: var(--gaydev-colors-bg-canvas);
+}
+
+.css-syq4or {
+    position: absolute;
+    bottom: -120px;
+    left: 18%;
+    width: 310px;
+    height: 310px;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
+
+.css-ub1j33 {
+    position: absolute;
+    left: 23.3%;
+    bottom: 1.6%;
+    width: 53.5%;
+    height: 53.5%;
+    border-radius: var(--gaydev-radii-full);
+    background: rgb(90, 85, 80);
+    --bg-currentcolor: #5A5550;
+    filter: blur(67px);
+}
+
+.css-146ok8 {
+    position: absolute;
+    left: 33.8%;
+    bottom: 23.2%;
+    width: 25.5%;
+    height: 25.5%;
+    border-radius: var(--gaydev-radii-full);
+    background: rgb(192, 147, 16);
+    --bg-currentcolor: #C09310;
+    filter: blur(32px);
+}
+
+.css-36s77g {
+    object-fit: cover;
+    position: absolute;
+    inset: 9%;
+    width: 82%;
+    height: 82%;
+    transform: rotate(15deg);
+    filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 6px 24px);
+}
+
+.css-7ugh1p {
+    max-width: var(--gaydev-sizes-full);
+    padding-inline: var(--gaydev-spacing-4);
+    padding-top: var(--gaydev-spacing-12);
+    padding-bottom: var(--gaydev-spacing-12);
+    position: relative;
+    z-index: 1;
+}
+
+@layer recipes {
+    .css-7ugh1p {
+        position: relative;
+        max-width: var(--gaydev-sizes-8xl);
+        width: 100%;
+        margin-inline: auto;
+        padding-inline: var(--gaydev-spacing-4);
+    }
+
+    @media screen and (min-width: 48rem) {
+        .css-7ugh1p {
+            padding-inline: var(--gaydev-spacing-6);
+        }
+    }
+
+    @media screen and (min-width: 64rem) {
+        .css-7ugh1p {
+            padding-inline: var(--gaydev-spacing-8);
+        }
+    }
+}
+
+@media screen and (min-width: 30rem) {
+    .css-7ugh1p {
+        max-width: var(--gaydev-sizes-full);
+        padding-inline: var(--gaydev-spacing-8);
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .css-7ugh1p {
+        max-width: var(--gaydev-sizes-full);
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .css-7ugh1p {
+        max-width: var(--gaydev-sizes-full);
+    }
+}
+
+@media screen and (min-width: 80rem) {
+    .css-7ugh1p {
+        max-width: var(--gaydev-sizes-8xl);
+    }
+}
+
+.css-v9zin2 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gaydev-spacing-8);
+}
+
+.css-289v62 {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--gaydev-spacing-8);
+}
+
+@media screen and (min-width: 30rem) {
+    .css-289v62 {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .css-289v62 {
+        flex-direction: row;
+    }
+}
+
+.css-egqv5g {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gaydev-spacing-4);
+    flex: 1 1 0%;
+    min-width: 0px;
+}
+
+.css-ffpx2h {
+    object-fit: cover;
+    height: 42px;
+    width: fit-content;
+}
+
+.css-1hgqpb {
+    color: var(--gaydev-colors-text-tretiary);
+    font-size: 12px;
+    max-width: 320px;
+}
+
+.css-ep5rdi {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1 1 0%;
+    min-width: 0px;
+}
+
+.css-ijp6av {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gaydev-colors-text-primary);
+}
+
+.css-1kmd4ac {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gaydev-colors-text-secondary);
+    width: fit-content;
+}
+
+@layer recipes {
+    .css-1kmd4ac {
+        display: inline-flex;
+        -webkit-box-align: center;
+        align-items: center;
+        outline: none;
+        gap: var(--gaydev-spacing-1\.5);
+        cursor: pointer;
+        border-radius: var(--gaydev-radii-l1);
+        --focus-ring-color: var(--gaydev-colors-color-palette-focus-ring);
+        color: var(--gaydev-colors-color-palette-fg);
+    }
+
+    .css-1kmd4ac:is(:focus, [data-focus]) {
+        outline-width: var(--focus-ring-width, 2px);
+        outline-offset: var(--focus-ring-offset, 2px);
+        outline-style: var(--focus-ring-style, solid);
+        outline-color: var(--focus-ring-color);
+    }
+
+    @media (hover: hover) {
+        .css-1kmd4ac:is(:hover, [data-hover]):not(:disabled, [data-disabled]) {
+            text-decoration-line: underline;
+            text-decoration-thickness: initial;
+            text-decoration-style: initial;
+            text-underline-offset: 3px;
+            --mix-textDecorationColor: color-mix(in srgb, currentColor 20%, transparent);
+            text-decoration-color: var(--mix-textDecorationColor, currentColor);
+        }
+    }
+}
+
+@media (hover: hover) {
+    .css-1kmd4ac:is(:hover, [data-hover]):not(:disabled, [data-disabled]) {
+        text-decoration: none;
+        color: var(--gaydev-colors-text-primary);
+    }
+}
+
+.css-bl28hi {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: var(--gaydev-spacing-4);
+}
+
+.css-j2mk2e {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--gaydev-spacing-3);
+    height: 36px;
+    padding-inline: var(--gaydev-spacing-2);
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-image: none;
+    --mix-borderColor: color-mix(in srgb, var(--gaydev-colors-stroke-default) 05%, transparent);
+    border-color: var(--mix-borderColor, var(--gaydev-colors-stroke-default));
+    --mix-background: color-mix(in srgb, var(--gaydev-colors-bg-islands) 05%, transparent);
+    background: var(--mix-background, var(--gaydev-colors-bg-islands));
+    --bg-currentcolor: var(--mix-background, var(--gaydev-colors-bg-islands));
+    cursor: pointer;
+    user-select: none;
+    transition: border-color 0.2s;
+}
+
+.css-j2mk2e[data-state="open"] .lang-select-arrow {
+    transform: rotate(180deg);
+}
+
+@media (hover: hover) {
+    .css-j2mk2e:is(:hover, [data-hover]):not(:disabled, [data-disabled]) {
+        --mix-borderColor: color-mix(in srgb, var(--gaydev-colors-stroke-default) 10%, transparent);
+        border-color: var(--mix-borderColor, var(--gaydev-colors-stroke-default));
+    }
+}
+
+.css-2ozwcd {
+    display: flex;
+    transition: transform 0.2s;
+}
+
+.css-5k5c57 {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gaydev-spacing-1);
+}
+
+.css-1u5pl7s {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    gap: var(--gaydev-spacing-2);
+    height: 42px;
+    padding-inline: var(--gaydev-spacing-3);
+    border-radius: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-image: none;
+    --mix-borderColor: color-mix(in srgb, var(--gaydev-colors-stroke-default) 05%, transparent);
+    border-color: var(--mix-borderColor, var(--gaydev-colors-stroke-default));
+    --mix-background: color-mix(in srgb, var(--gaydev-colors-bg-islands) 05%, transparent);
+    background: var(--mix-background, var(--gaydev-colors-bg-islands));
+    --bg-currentcolor: var(--mix-background, var(--gaydev-colors-bg-islands));
+    color: var(--gaydev-colors-text-primary);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@layer recipes {
+    .css-1u5pl7s {
+        display: inline-flex;
+        -webkit-box-align: center;
+        align-items: center;
+        outline: none;
+        gap: var(--gaydev-spacing-1\.5);
+        cursor: pointer;
+        border-radius: var(--gaydev-radii-l1);
+        --focus-ring-color: var(--gaydev-colors-color-palette-focus-ring);
+        color: var(--gaydev-colors-color-palette-fg);
+    }
+
+    .css-1u5pl7s:is(:focus, [data-focus]) {
+        outline-width: var(--focus-ring-width, 2px);
+        outline-offset: var(--focus-ring-offset, 2px);
+        outline-style: var(--focus-ring-style, solid);
+        outline-color: var(--focus-ring-color);
+    }
+
+    @media (hover: hover) {
+        .css-1u5pl7s:is(:hover, [data-hover]):not(:disabled, [data-disabled]) {
+            text-decoration-line: underline;
+            text-decoration-thickness: initial;
+            text-decoration-style: initial;
+            text-underline-offset: 3px;
+            --mix-textDecorationColor: color-mix(in srgb, currentColor 20%, transparent);
+            text-decoration-color: var(--mix-textDecorationColor, currentColor);
+        }
+    }
+}
+
+@media screen and (min-width: 30rem) {
+    .css-1u5pl7s {
+        padding-inline: var(--gaydev-spacing-4);
+    }
+}
+
+@media (hover: hover) {
+    .css-1u5pl7s:is(:hover, [data-hover]):not(:disabled, [data-disabled]) {
+        text-decoration: none;
+        --mix-borderColor: color-mix(in srgb, var(--gaydev-colors-stroke-default) 10%, transparent);
+        border-color: var(--mix-borderColor, var(--gaydev-colors-stroke-default));
+    }
+}
+
+.css-1hnw7ag {
+    flex-shrink: 0;
+}
+
+@layer recipes {
+    .css-1hnw7ag {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+}
+
+.css-epvm6 {
+    white-space: nowrap;
+}
+
+.css-ardpkz {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    gap: var(--gaydev-spacing-2);
+    height: 42px;
+    padding-inline: var(--gaydev-spacing-3);
+    border-radius: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-image: none;
+    --mix-borderColor: color-mix(in srgb, var(--gaydev-colors-stroke-default) 05%, transparent);
+    border-color: var(--mix-borderColor, var(--gaydev-colors-stroke-default));
+    background: radial-gradient(90% 300% at 50% 100%, rgba(164, 102, 255, 0.2) 0%, rgba(164, 102, 255, 0) 100%), linear-gradient(90deg, rgba(164, 102, 255, 0.05) 0%, rgba(164, 102, 255, 0.05) 100%), rgba(233, 216, 255, 0.05);
+    --bg-currentcolor: radial-gradient(90% 300% at 50% 100%, rgba(164, 102, 255, 0.20) 0%, rgba(164, 102, 255, 0.00) 100%), linear-gradient(90deg, rgba(164, 102, 255, 0.05) 0%, rgba(164, 102, 255, 0.05) 100%), rgba(233, 216, 255, 0.05);
+    color: var(--gaydev-colors-text-primary);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@layer recipes {
+    .css-ardpkz {
+        display: inline-flex;
+        -webkit-box-align: center;
+        align-items: center;
+        outline: none;
+        gap: var(--gaydev-spacing-1\.5);
+        cursor: pointer;
+        border-radius: var(--gaydev-radii-l1);
+        --focus-ring-color: var(--gaydev-colors-color-palette-focus-ring);
+        color: var(--gaydev-colors-color-palette-fg);
+    }
+
+    .css-ardpkz:is(:focus, [data-focus]) {
+        outline-width: var(--focus-ring-width, 2px);
+        outline-offset: var(--focus-ring-offset, 2px);
+        outline-style: var(--focus-ring-style, solid);
+        outline-color: var(--focus-ring-color);
+    }
+
+    @media (hover: hover) {
+        .css-ardpkz:is(:hover, [data-hover]):not(:disabled, [data-disabled]) {
+            text-decoration-line: underline;
+            text-decoration-thickness: initial;
+            text-decoration-style: initial;
+            text-underline-offset: 3px;
+            --mix-textDecorationColor: color-mix(in srgb, currentColor 20%, transparent);
+            text-decoration-color: var(--mix-textDecorationColor, currentColor);
+        }
+    }
+}
+
+@media screen and (min-width: 30rem) {
+    .css-ardpkz {
+        padding-inline: var(--gaydev-spacing-4);
+    }
+}
+
+@media (hover: hover) {
+    .css-ardpkz:is(:hover, [data-hover]):not(:disabled, [data-disabled]) {
+        text-decoration: none;
+        --mix-borderColor: color-mix(in srgb, var(--gaydev-colors-stroke-default) 10%, transparent);
+        border-color: var(--mix-borderColor, var(--gaydev-colors-stroke-default));
+    }
+}
+
+.css-z7jjfv {
+    object-fit: cover;
+    height: 199px;
+}
+
+@media screen and (min-width: 30rem) {
+    .css-z7jjfv {
+        height: 199px;
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .css-z7jjfv {
+        height: 288px;
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .css-z7jjfv {
+        height: 288px;
+    }
+}
+
+@media screen and (min-width: 80rem) {
+    .css-z7jjfv {
+        height: 270px;
+    }
+}
+
+.css-3zrys1 { border-radius: 20px; --mix-backgroundColor: color-mix(in srgb, var(--gaydev-colors-bg-islands) 05%, transparent); background-color: var(--mix-backgroundColor, var(--gaydev-colors-bg-islands)); --bg-currentcolor: var(--mix-backgroundColor, var(--gaydev-colors-bg-islands)); height: 44px; padding: 16px 8px 16px 12px; }
+@layer recipes {
+    .css-3zrys1 { display: flex; -webkit-box-align: center; align-items: center; -webkit-box-pack: center; justify-content: center; }
+}
+@media screen and (min-width: 30rem) {
+    .css-3zrys1 { height: 52px; padding: 16px 12px 16px 16px; }
+}
+
+.css-16tkj8g { font-size: var(--gaydev-font-sizes-lg); font-weight: 600; }
+@media screen and (min-width: 30rem) {
+    .css-16tkj8g { font-size: var(--gaydev-font-sizes-xl); }
+}
+
+.css-ta6kzn { border-radius: 100px; }
+@media screen and (min-width: 30rem) {
+    .css-ta6kzn { border-radius: 20px; }
+}
+
+.css-16mlugo { border-radius: 20px; border: 1px solid rgba(115, 76, 187, 0.2); background: radial-gradient(178.96% 80% at 20% 50%, rgba(115, 76, 187, 0.05) 10.96%, rgb(115, 76, 187) 100%), rgba(115, 76, 187, 0.05); --bg-currentcolor: radial-gradient(178.96% 80% at 20% 50%, rgba(115, 76, 187, 0.05) 10.96%, #734CBB 100%),rgba(115, 76, 187, 0.05); backdrop-filter: blur(16px); padding: 16px 20px 16px 24px; height: 52px; font-weight: 700; text-transform: uppercase; color: var(--gaydev-colors-text-primary); font-size: var(--gaydev-font-sizes-md); }
+@layer recipes {
+    .css-16mlugo {
+        display: inline-flex;
+        appearance: none;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        user-select: none;
+        position: relative;
+        border-radius: var(--gaydev-radii-l2);
+        white-space: nowrap;
+        vertical-align: middle;
+        border-width: 1px;
+        border-color: var(--gaydev-colors-transparent);
+        cursor: var(--gaydev-cursor-button);
+        flex-shrink: 0;
+        outline: 0px;
+        line-height: 1.25rem;
+        isolation: isolate;
+        font-weight: var(--gaydev-font-weights-medium);
+        transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, translate, transform;
+        transition-duration: var(--gaydev-durations-moderate);
+        --focus-ring-color: var(--gaydev-colors-color-palette-focus-ring);
+        height: var(--gaydev-sizes-10);
+        min-width: var(--gaydev-sizes-10);
+        font-size: var(--gaydev-font-sizes-sm);
+        padding-inline: var(--gaydev-spacing-4);
+        gap: var(--gaydev-spacing-2);
+        background: var(--gaydev-colors-color-palette-solid);
+        --bg-currentcolor: var(--gaydev-colors-color-palette-solid);
+        color: var(--gaydev-colors-color-palette-contrast);
+    }
+
+    .css-16mlugo:is(:focus-visible, [data-focus-visible]) {
+        outline-width: var(--focus-ring-width, 2px);
+        outline-offset: var(--focus-ring-offset, 2px);
+        outline-style: var(--focus-ring-style, solid);
+        outline-color: var(--focus-ring-color);
+    }
+
+    .css-16mlugo:is(:disabled, [disabled], [data-disabled], [aria-disabled="true"]) {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    .css-16mlugo :where(svg) {
+        flex-shrink: 0;
+        width: var(--gaydev-sizes-5);
+        height: var(--gaydev-sizes-5);
+    }
+
+    .css-16mlugo:is([aria-expanded="true"], [data-expanded], [data-state="expanded"]) {
+        --mix-background: color-mix(in srgb, var(--gaydev-colors-color-palette-solid) 90%, transparent);
+        background: var(--mix-background, var(--gaydev-colors-color-palette-solid));
+        --bg-currentcolor: var(--mix-background, var(--gaydev-colors-color-palette-solid));
+    }
+
+    @media (hover: hover) {
+        .css-16mlugo:is(:hover, [data-hover]):not(:disabled, [data-disabled]) {
+            --mix-background: color-mix(in srgb, var(--gaydev-colors-color-palette-solid) 90%, transparent);
+            background: var(--mix-background, var(--gaydev-colors-color-palette-solid));
+            --bg-currentcolor: var(--mix-background, var(--gaydev-colors-color-palette-solid));
+        }
+    }
+}
+@media (hover: hover) {
+    .css-16mlugo:is(:hover, [data-hover]):not(:disabled, [data-disabled]) { --mix-background: color-mix(in srgb, var(--gaydev-colors-color-palette-solid) 90%, transparent); background: var(--mix-background, var(--gaydev-colors-color-palette-solid)); --bg-currentcolor: var(--mix-background, var(--gaydev-colors-color-palette-solid)); }
+}
+
+.css-14frued { object-fit: cover; width: 44px; height: 44px; border-radius: 16px; border-width: 1px; border-style: solid; border-image: none; --mix-borderColor: color-mix(in srgb, var(--gaydev-colors-stroke-default) 10%, transparent); border-color: var(--mix-borderColor, var(--gaydev-colors-stroke-default)); }
+@media screen and (min-width: 30rem) {
+    .css-14frued { width: 52px; height: 52px; }
+}
+
+.css-age7l4 { display: flex; -webkit-box-align: center; align-items: center; flex-direction: row; gap: var(--gaydev-spacing-2); }
+
+.css-14zcihu { display: flex; -webkit-box-align: center; align-items: center; -webkit-box-pack: center; justify-content: center; flex-direction: row; gap: var(--gaydev-spacing-1);}
