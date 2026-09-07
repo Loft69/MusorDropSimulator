@@ -67,12 +67,12 @@ function AdIcon({ className }) {
 
 
 const playCoin = () => {
-    const audio = new Audio("/assets/tish.mp3");
+    const audio = new Audio("./assets/tish.mp3");
     audio.play().catch(error => console.log('Ошибка воспроизведения:', error));
 };
 
 const playSpike = () => {
-    const audio = new Audio("/assets/ao.mp3");
+    const audio = new Audio("./assets/ao.mp3");
     audio.play().catch(error => console.log('Ошибка воспроизведения:', error));
 };
 

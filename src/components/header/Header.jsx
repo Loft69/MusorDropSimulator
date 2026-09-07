@@ -33,7 +33,7 @@ export default function Header({ selectedCase, onBackRaw }) {
             <div className="chakra-stack css-1i8f8ty">
                 <div className="chakra-stack css-ppb4ub">
                     <button data-discover="true" type={"button"} onClick={onBack} className="click-button">
-                        <img className="chakra-image css-1syfr4j" src="/public/images/logo-CUS07uzv.svg"/>
+                        <img className="chakra-image css-1syfr4j" src="./images/logo-CUS07uzv.svg"/>
                     </button>
 
                     <div className="chakra-stack css-6izshx">

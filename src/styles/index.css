@@ -13,7 +13,7 @@
 
 @font-face {
     font-family: SF Pro Rounded;
-    src: url(../../public/images/SF-Pro-Rounded-Ultralight-niY2zc8r.otf)format("opentype");
+    src: url(/images/SF-Pro-Rounded-Ultralight-niY2zc8r.otf)format("opentype");
     font-weight: 100;
     font-style: normal;
     font-display: swap
@@ -21,7 +21,7 @@
 
 @font-face {
     font-family: SF Pro Rounded;
-    src: url(../../public/images/SF-Pro-Rounded-Thin-DbQ2BQqX.otf)format("opentype");
+    src: url(/images/SF-Pro-Rounded-Thin-DbQ2BQqX.otf)format("opentype");
     font-weight: 200;
     font-style: normal;
     font-display: swap
@@ -29,7 +29,7 @@
 
 @font-face {
     font-family: SF Pro Rounded;
-    src: url(../../public/images/SF-Pro-Rounded-Light-DgPwchCK.otf)format("opentype");
+    src: url(/images/SF-Pro-Rounded-Light-DgPwchCK.otf)format("opentype");
     font-weight: 300;
     font-style: normal;
     font-display: swap
@@ -37,7 +37,7 @@
 
 @font-face {
     font-family: SF Pro Rounded;
-    src: url(../../public/images/SF-Pro-Rounded-Regular-BpcFdtlb.otf)format("opentype");
+    src: url(/images/SF-Pro-Rounded-Regular-BpcFdtlb.otf)format("opentype");
     font-weight: 400;
     font-style: normal;
     font-display: swap
@@ -45,7 +45,7 @@
 
 @font-face {
     font-family: SF Pro Rounded;
-    src: url(../../public/images/SF-Pro-Rounded-Medium-CDQcL2QF.otf)format("opentype");
+    src: url(/images/SF-Pro-Rounded-Medium-CDQcL2QF.otf)format("opentype");
     font-weight: 500;
     font-style: normal;
     font-display: swap
@@ -53,7 +53,7 @@
 
 @font-face {
     font-family: SF Pro Rounded;
-    src: url(../../public/images/SF-Pro-Rounded-Semibold-zQiqMHwN.otf)format("opentype");
+    src: url(/images/SF-Pro-Rounded-Semibold-zQiqMHwN.otf)format("opentype");
     font-weight: 600;
     font-style: normal;
     font-display: swap
@@ -61,7 +61,7 @@
 
 @font-face {
     font-family: SF Pro Rounded;
-    src: url(../../public/images/SF-Pro-Rounded-Bold-DU54a1he.otf)format("opentype");
+    src: url(/images/SF-Pro-Rounded-Bold-DU54a1he.otf)format("opentype");
     font-weight: 700;
     font-style: normal;
     font-display: swap
@@ -69,7 +69,7 @@
 
 @font-face {
     font-family: SF Pro Rounded;
-    src: url(../../public/images/SF-Pro-Rounded-Heavy-8On75r33.otf)format("opentype");
+    src: url(/images/SF-Pro-Rounded-Heavy-8On75r33.otf)format("opentype");
     font-weight: 800;
     font-style: normal;
     font-display: swap
@@ -77,7 +77,7 @@
 
 @font-face {
     font-family: SF Pro Rounded;
-    src: url(../../public/images/SF-Pro-Rounded-Black-D45MJlp4.otf)format("opentype");
+    src: url(/images/SF-Pro-Rounded-Black-D45MJlp4.otf)format("opentype");
     font-weight: 900;
     font-style: normal;
     font-display: swap
@@ -85,7 +85,7 @@
 
 @font-face {
     font-family: Santa Maria Sans;
-    src: url(../../public/images/Santa-Maria-Sand-blsmsBC9.ttf);
+    src: url(/images/Santa-Maria-Sand-blsmsBC9.ttf);
     font-weight: 900;
     font-style: normal;
     font-display: swap
@@ -1769,7 +1769,7 @@ html {
     position: absolute;
     width: var(--gaydev-sizes-full);
     height: var(--gaydev-sizes-full);
-    background-image: url("../../public/assets/opening-DD9ysBv7.svg");
+    background-image: url("/assets/opening-DD9ysBv7.svg");
     background-position: center top;
     background-repeat: no-repeat;
     transition-property: opacity;
@@ -1938,7 +1938,7 @@ html {
     position: absolute;
     width: var(--gaydev-sizes-full);
     height: var(--gaydev-sizes-full);
-    background-image: url("../../public/assets/opening-DD9ysBv7.svg");
+    background-image: url("/assets/opening-DD9ysBv7.svg");
     background-position: center top;
     background-repeat: no-repeat;
     transition-property: opacity;
@@ -2312,7 +2312,7 @@ html {
     animation-name: slide-from-bottom, fade-in;
     animation-duration: 0.25s;
     animation-timing-function: var(--gaydev-easings-ease-out);
-    background-image: url("../../public/assets/most_ancient-yjQzIrWo.png");
+    background-image: url("/assets/most_ancient-yjQzIrWo.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2392,7 +2392,7 @@ html {
     animation-name: slide-from-bottom, fade-in;
     animation-duration: 0.25s;
     animation-timing-function: var(--gaydev-easings-ease-out);
-    background-image: url("../../public/assets/ancient-Bs3b-m8t.png");
+    background-image: url("/assets/ancient-Bs3b-m8t.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2421,7 +2421,7 @@ html {
     animation-name: slide-from-bottom, fade-in;
     animation-duration: 0.25s;
     animation-timing-function: var(--gaydev-easings-ease-out);
-    background-image: url("../../public/assets/mythical-Do4LthRH.png");
+    background-image: url("/assets/mythical-Do4LthRH.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2450,7 +2450,7 @@ html {
     animation-name: slide-from-bottom, fade-in;
     animation-duration: 0.25s;
     animation-timing-function: var(--gaydev-easings-ease-out);
-    background-image: url("../../public/assets/legendary-2LpAiDdH.png");
+    background-image: url("/assets/legendary-2LpAiDdH.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
